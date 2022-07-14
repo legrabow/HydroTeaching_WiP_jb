@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Trennstromlinie &#8212; Collection of HydroTeaching</title>
-    
+
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
-    
+
   <link rel="stylesheet"
     href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
   <link rel="preload" as="font" type="font/woff2" crossorigin
@@ -27,7 +27,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
@@ -44,6 +44,7 @@
     <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/design-tabs.js"></script>
+    <script> window.onload = initThebeSBT;</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
@@ -57,10 +58,10 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="prev" title="Porosity" href="../Porositaet/Porosity.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
-    
+
 
     <!-- Google Analytics -->
-    
+
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
 <!-- Checkboxes to toggle the left sidebar -->
@@ -77,36 +78,36 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="announcement header-item noprint"></div>
 <div class="header header-item noprint"></div>
 
-    
+
     <div class="container-fluid" id="banner"></div>
 
-    
+
 
     <div class="container-xl">
       <div class="row">
-          
+
 <!-- Sidebar -->
 <div class="bd-sidebar noprint" id="site-navigation">
     <div class="bd-sidebar__content">
         <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
-      
+
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
-        
-      
-      
+
+
+
       <img src="../_static/TUD_logo.png" class="logo" alt="logo">
-      
-      
+
+
       <h1 class="site-logo" id="site-title">Collection of HydroTeaching</h1>
-      
+
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        
+
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../Intro.html">
@@ -136,41 +137,41 @@ const thebe_selector_output = ".output, .cell_output"
 </nav></div>
         <div class="bd-sidebar__bottom">
              <!-- To handle the deprecated key -->
-            
+
             <div class="navbar_extra_footer">
             Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            
+
         </div>
     </div>
     <div id="rtd-footer-container"></div>
 </div>
 
 
-          
 
 
-          
+
+
 <!-- A tiny helper pixel to detect if we've scrolled -->
 <div class="sbt-scroll-pixel-helper"></div>
 <!-- Main content -->
 <div class="col py-0 content-container">
-    
+
     <div class="header-article row sticky-top noprint">
-        
+
 
 
 
 <div class="col py-1 d-flex header-article-main">
     <div class="header-article__left">
-        
+
         <label for="__navigation"
   class="headerbtn"
   data-toggle="tooltip"
 data-placement="right"
 title="Toggle navigation"
 >
-  
+
 
 <span class="headerbtn__icon-container">
   <i class="fas fa-bars"></i>
@@ -178,7 +179,7 @@ title="Toggle navigation"
 
 </label>
 
-        
+
     </div>
     <div class="header-article__right">
 <div class="menu-dropdown menu-dropdown-launch-buttons">
@@ -195,26 +196,26 @@ title="Toggle navigation"
 data-placement="left"
 title="Launch on Binder"
 >
-  
+
 
 <span class="headerbtn__icon-container">
-  
+
     <img src="../_static/images/logo_binder.svg">
   </span>
 <span class="headerbtn__text-container">Binder</span>
 </a>
 
       </li>
-      
+
       <li>
-        
+
 <button onclick="initThebeSBT()"
   class="headerbtn headerbtn-launch-thebe"
   data-toggle="tooltip"
 data-placement="left"
 title="Launch Thebe"
 >
-  
+
 
 <span class="headerbtn__icon-container">
   <i class="fas fa-play"></i>
@@ -223,7 +224,7 @@ title="Launch Thebe"
 </button>
 
       </li>
-      
+
     </ul>
   </div>
 </div>
@@ -234,7 +235,7 @@ title="Launch Thebe"
 data-placement="bottom"
 title="Fullscreen mode"
 >
-  
+
 
 <span class="headerbtn__icon-container">
   <i class="fas fa-expand"></i>
@@ -256,7 +257,7 @@ title="Fullscreen mode"
 data-placement="left"
 title="Source repository"
 >
-  
+
 
 <span class="headerbtn__icon-container">
   <i class="fab fa-github"></i>
@@ -265,7 +266,7 @@ title="Source repository"
 </a>
 
       </li>
-      
+
       <li>
         <a href="https://github.com/legrabow/HydroTeaching_WiP_jb/issues/new?title=Issue%20on%20page%20%2FTrennstromlinie/Trennstromlinie.html&body=Your%20issue%20content%20here."
    class="headerbtn"
@@ -273,7 +274,7 @@ title="Source repository"
 data-placement="left"
 title="Open an issue"
 >
-  
+
 
 <span class="headerbtn__icon-container">
   <i class="fas fa-lightbulb"></i>
@@ -282,7 +283,7 @@ title="Open an issue"
 </a>
 
       </li>
-      
+
     </ul>
   </div>
 </div>
@@ -301,7 +302,7 @@ title="Open an issue"
 data-placement="left"
 title="Download source file"
 >
-  
+
 
 <span class="headerbtn__icon-container">
   <i class="fas fa-file"></i>
@@ -310,16 +311,16 @@ title="Download source file"
 </a>
 
       </li>
-      
+
       <li>
-        
+
 <button onclick="printPdf(this)"
   class="headerbtn"
   data-toggle="tooltip"
 data-placement="left"
 title="Print to PDF"
 >
-  
+
 
 <span class="headerbtn__icon-container">
   <i class="fas fa-file-pdf"></i>
@@ -328,7 +329,7 @@ title="Print to PDF"
 </button>
 
       </li>
-      
+
     </ul>
   </div>
 </div>
@@ -348,14 +349,14 @@ title="Print to PDF"
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
-                        
+
                     </div>
                 </div>
             </div>
             <main id="main-content" role="main">
-                
+
               <div>
-                
+
   <section class="tex2jax_ignore mathjax_ignore" id="trennstromlinie">
 <h1>Trennstromlinie<a class="headerlink" href="#trennstromlinie" title="Permalink to this headline">#</a></h1>
 <p><img alt="fig1.1" src="../_images/abstracted_map_v3.png" /></p>
@@ -385,7 +386,7 @@ title="Print to PDF"
 <span class="k">def</span> <span class="nf">ymax_unconf</span><span class="p">(</span><span class="n">Q</span><span class="p">,</span> <span class="n">L</span><span class="p">,</span> <span class="n">K</span><span class="p">,</span> <span class="n">h1</span><span class="p">,</span> <span class="n">h2</span><span class="p">):</span>
     <span class="n">ymax</span> <span class="o">=</span> <span class="n">Q</span><span class="o">*</span><span class="n">L</span><span class="o">/</span><span class="p">(</span><span class="n">K</span><span class="o">*</span><span class="p">(</span><span class="n">h1</span><span class="o">**</span><span class="mi">2</span><span class="o">-</span><span class="n">h2</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
     <span class="k">return</span> <span class="n">ymax</span>
-    
+
 <span class="k">def</span> <span class="nf">x0_unconf</span><span class="p">(</span><span class="n">Q</span><span class="p">,</span> <span class="n">L</span><span class="p">,</span> <span class="n">K</span><span class="p">,</span> <span class="n">h1</span><span class="p">,</span> <span class="n">h2</span><span class="p">):</span>
     <span class="n">x0</span> <span class="o">=</span> <span class="o">-</span><span class="n">Q</span><span class="o">*</span><span class="n">L</span><span class="o">/</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">K</span><span class="o">*</span><span class="p">(</span><span class="n">h1</span><span class="o">**</span><span class="mi">2</span><span class="o">-</span><span class="n">h2</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
     <span class="k">return</span> <span class="n">x0</span>
@@ -398,13 +399,13 @@ title="Print to PDF"
     <span class="c1">#x0 = x0_conf(Q, K, i, b)</span>
     <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="n">ymax</span><span class="p">,</span> <span class="n">ymax</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">)</span>
     <span class="n">x</span> <span class="o">=</span> <span class="n">y</span><span class="o">/</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">K</span><span class="o">*</span><span class="n">i</span><span class="o">*</span><span class="n">b</span><span class="o">*</span><span class="n">y</span><span class="o">/</span><span class="n">Q</span><span class="p">))</span>
-    
-    
+
+
     <span class="n">h_iso</span> <span class="o">=</span> <span class="n">isohypsen_conf</span><span class="p">(</span><span class="n">h1</span><span class="p">,</span> <span class="n">h2</span><span class="p">,</span> <span class="n">x1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">K</span><span class="p">,</span> <span class="n">Q</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">x_iso_tilted</span><span class="p">,</span> <span class="n">y_iso_tilted</span><span class="p">)</span>
 
     <span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="n">x_iso_tilted</span><span class="p">,</span> <span class="n">y_iso_tilted</span><span class="p">,</span> <span class="n">h_iso</span><span class="p">,</span> <span class="n">dist_iso</span><span class="p">,</span> <span class="n">plot_coor</span><span class="p">)</span>
 
-    
+
 <span class="k">def</span> <span class="nf">TSL_unconf</span><span class="p">(</span><span class="n">Q</span><span class="p">,</span> <span class="n">K</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">dist_iso</span><span class="p">,</span> <span class="n">plot_coor</span><span class="p">):</span>
     <span class="n">h2</span> <span class="o">=</span> <span class="n">h1</span> <span class="o">-</span> <span class="n">i</span> <span class="o">*</span> <span class="p">(</span><span class="n">x1</span> <span class="o">-</span> <span class="n">x2</span><span class="p">)</span>
     <span class="n">L</span> <span class="o">=</span> <span class="n">x1</span> <span class="o">-</span> <span class="n">x2</span>
@@ -413,7 +414,7 @@ title="Print to PDF"
     <span class="c1">#x0 = x0_unconf(Q, L, K, h1, h2)</span>
     <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="n">ymax</span><span class="p">,</span> <span class="n">ymax</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">)</span>
     <span class="n">x</span> <span class="o">=</span> <span class="n">y</span><span class="o">/</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">K</span><span class="o">*</span><span class="p">(</span><span class="n">h1</span><span class="o">**</span><span class="mi">2</span><span class="o">-</span><span class="n">h2</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">y</span><span class="o">/</span><span class="p">(</span><span class="n">Q</span> <span class="o">*</span> <span class="n">L</span><span class="p">)))</span>
-    
+
     <span class="n">h_iso</span> <span class="o">=</span> <span class="n">isohypsen_unconf</span><span class="p">(</span><span class="n">h1</span><span class="p">,</span> <span class="n">h2</span><span class="p">,</span> <span class="n">x1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">K</span><span class="p">,</span> <span class="n">Q</span><span class="p">,</span> <span class="n">x_iso_tilted</span><span class="p">,</span> <span class="n">y_iso_tilted</span><span class="p">)</span>
 
     <span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="n">x_iso_tilted</span><span class="p">,</span> <span class="n">y_iso_tilted</span><span class="p">,</span> <span class="n">h_iso</span><span class="p">,</span> <span class="n">dist_iso</span><span class="p">,</span> <span class="n">plot_coor</span><span class="p">)</span>
@@ -427,14 +428,14 @@ title="Print to PDF"
     <span class="n">h_r1</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">h_iso</span> <span class="o">=</span> <span class="p">(</span><span class="n">h2</span><span class="o">-</span><span class="n">h1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="n">x1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">x2</span><span class="o">-</span><span class="n">x1</span><span class="p">)</span> <span class="o">+</span><span class="n">h1</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">Q</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">y</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="n">r1</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">K</span><span class="p">)</span> <span class="o">+</span> <span class="n">h_r1</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">h_iso</span>
-   
+
 
 <span class="k">def</span> <span class="nf">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="n">x_iso</span><span class="p">,</span> <span class="n">y_iso</span><span class="p">,</span> <span class="n">h_iso</span><span class="p">,</span> <span class="n">dist_iso</span><span class="p">,</span> <span class="n">plot_coor</span><span class="p">):</span>
     <span class="n">tsl_normal</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">([</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">])</span>
     <span class="n">iso_normal</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">stack</span><span class="p">([</span><span class="n">x_iso</span><span class="p">,</span><span class="n">y_iso</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
     <span class="n">iso_tilted</span><span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">tensordot</span><span class="p">(</span><span class="n">rotation_matrix</span><span class="p">,</span> <span class="n">iso_normal</span><span class="p">,</span> <span class="n">axes</span><span class="o">=</span><span class="p">([</span><span class="mi">1</span><span class="p">],[</span><span class="mi">2</span><span class="p">]))</span>
     <span class="n">tsl_tilted</span> <span class="o">=</span> <span class="n">rotation_matrix</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">tsl_normal</span><span class="p">)</span>
-    
+
     <span class="c1"># Erstellen der Figure und der Axes</span>
     <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">20</span><span class="p">))</span>
     <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
@@ -450,11 +451,11 @@ title="Print to PDF"
     <span class="n">ax_child</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">([</span><span class="n">y_min</span><span class="p">,</span><span class="n">y_max</span><span class="p">])</span>
 
     <span class="n">ax_child</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tsl_tilted</span><span class="p">[</span><span class="mi">0</span><span class="p">,:],</span> <span class="n">tsl_tilted</span><span class="p">[</span><span class="mi">1</span><span class="p">,:],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">)</span>
-    
+
     <span class="n">positions</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">h_iso</span><span class="p">)),</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">h_iso</span><span class="p">),</span> <span class="n">dist_iso</span><span class="p">)</span>
     <span class="n">ctr</span> <span class="o">=</span> <span class="n">ax_child</span><span class="o">.</span><span class="n">contour</span><span class="p">(</span><span class="n">iso_tilted</span><span class="p">[</span><span class="mi">0</span><span class="p">,:,:],</span> <span class="n">iso_tilted</span><span class="p">[</span><span class="mi">1</span><span class="p">,:,:],</span> <span class="n">h_iso</span><span class="p">,</span> <span class="n">levels</span><span class="o">=</span><span class="n">positions</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">)</span>
     <span class="n">ax_child</span><span class="o">.</span><span class="n">clabel</span><span class="p">(</span><span class="n">ctr</span><span class="p">,</span> <span class="n">ctr</span><span class="o">.</span><span class="n">levels</span><span class="p">,</span> <span class="n">inline</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
-    
+
     <span class="k">if</span> <span class="n">plot_coor</span><span class="p">:</span>
         <span class="n">ax_child</span><span class="o">.</span><span class="n">arrow</span><span class="p">(</span><span class="n">y_arrow_start</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span><span class="n">y_arrow_start</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span>
                        <span class="n">y_arrow_end</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">y_arrow_start</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span>
@@ -489,10 +490,10 @@ title="Print to PDF"
         <span class="n">wgts</span><span class="p">[</span><span class="s2">&quot;b&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">FloatSlider</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="mi">120</span><span class="p">,</span><span class="nb">min</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;Aquifer thickness, m&quot;</span><span class="p">,</span><span class="n">style</span><span class="o">=</span> <span class="p">{</span><span class="s1">&#39;description_width&#39;</span><span class="p">:</span> <span class="s1">&#39;initial&#39;</span><span class="p">})</span>
     <span class="k">elif</span> <span class="n">flow_type</span> <span class="o">==</span> <span class="s2">&quot;Unconfined&quot;</span><span class="p">:</span>
         <span class="n">func</span> <span class="o">=</span> <span class="n">TSL_unconf</span>
-        
+
     <span class="n">interact_manual</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="o">**</span><span class="n">wgts</span><span class="p">)</span>
-    
-    
+
+
 <span class="n">theta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="mi">29</span><span class="p">)</span>
 <span class="n">c</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
 <span class="n">rotation_matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(((</span><span class="n">c</span><span class="p">,</span> <span class="o">-</span><span class="n">s</span><span class="p">),</span> <span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">c</span><span class="p">)))</span>
@@ -574,7 +575,7 @@ title="Print to PDF"
 </div>
 <div class="cell tag_thebe-init docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">interact</span><span class="p">(</span><span class="n">interactive_plot</span><span class="p">,</span> 
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">interact</span><span class="p">(</span><span class="n">interactive_plot</span><span class="p">,</span>
          <span class="n">flow_type</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Dropdown</span><span class="p">(</span><span class="n">options</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Confined&quot;</span><span class="p">,</span> <span class="s2">&quot;Unconfined&quot;</span><span class="p">],</span><span class="n">value</span><span class="o">=</span><span class="s2">&quot;Confined&quot;</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Aquifer Type&quot;</span><span class="p">),</span>
         <span class="n">continuous_update</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
@@ -604,10 +605,10 @@ title="Print to PDF"
     <script>kernelName = 'python3'</script>
 
               </div>
-              
+
             </main>
             <footer class="footer-article noprint">
-                
+
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="../Porositaet/Porosity.html" title="previous page">
@@ -623,20 +624,20 @@ title="Print to PDF"
     </div>
     <div class="footer-content row">
         <footer class="col footer"><p>
-  
+
     By Thomas Reimann, Leonard Grabow<br/>
-  
+
       &copy; Copyright 2022.<br/>
 </p>
         </footer>
     </div>
-    
+
 </div>
 
 
       </div>
     </div>
-  
+
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
   <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 
