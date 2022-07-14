@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+# # Trennstromlinie
+
 # <img src='../IMG/TUD_logo.png' align='right' width='15%'></img>
 
 # <img src='abstracted_map_v3.png'></img>
@@ -181,7 +183,10 @@ layout = widgets.Layout(width='auto', height='40px')
 
 # Einladen der Draufsicht
 img = plt.imread("abstracted_map_v3.png")
- 
+
+
+# In[3]:
+
 
 interact(interactive_plot, 
          flow_type = widgets.Dropdown(options=["Confined", "Unconfined"],value="Confined", description="Aquifer Type"),

@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+# # Porosity
+
 # In[1]:
 
 
@@ -136,14 +138,14 @@ def check_answer(change):
 question.observe(check_answer, names='value')
 
 # Start the plot and the question/answer field
+
+
+
+# In[4]:
+
+
 interact(plot_box,
          portion_solid = portion_solid,
          portion_water = portion_water)
 display(question)
-
-
-# In[ ]:
-
-
-
 

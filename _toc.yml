@@ -4,4 +4,6 @@
 format: jb-book
 root: README
 chapters:
-- file: Grabenströmung/MWW01_T02_00_index
+- file: Darcy_Column/Darcy
+- file: Porositaet/Porosity
+- file: Trennstromlinie/Trennstromlinie
