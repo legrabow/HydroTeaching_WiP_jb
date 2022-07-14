@@ -1,0 +1,50 @@
+[
+    {
+        "question": "Randbedingung A",
+        "type": "many_choice",
+        "answers": [
+          {
+              "answer": "Physikalische Randbedingung",
+              "correct": false,
+              "feedback": "Falsch. Diese Randbedingung ist keine reale Gebietseigenschaft."
+          },
+          {
+              "answer": "Hydraulische Randbedingung",
+              "correct": true,
+              "feedback": "Richtig! Diese Randbedingungen entsteht nur durch die hydrologischen Bedigungen."
+          }
+        ]
+    },
+    {
+        "question": "Randbedingung B",
+        "type": "multiple_choice",
+        "answers": [
+          {
+              "answer": "Physikalische Randbedingung",
+              "correct": false,
+              "feedback": "Falsch. Diese Randbedingung ist keine reale Gebietseigenschaft."
+          },
+          {
+              "answer": "Hydraulische Randbedingung",
+              "correct": true,
+              "feedback": "Richtig! Diese Randbedingungen entsteht nur durch die hydrologischen Bedigungen."
+          }
+        ]
+    },
+    {
+        "question": "Randbedingung C",
+        "type": "multiple_choice",
+        "answers": [
+          {
+              "answer": "Physikalische Randbedingung",
+              "correct": false,
+              "feedback": "Falsch. Diese Randbedingung ist keine reale Gebietseigenschaft."
+          },
+          {
+              "answer": "Hydraulische Randbedingung",
+              "correct": true,
+              "feedback": "Richtig! Diese Randbedingungen entsteht nur durch die hydrologischen Bedigungen."
+          }
+        ]
+    }
+]
