@@ -115,19 +115,8 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="MWW01_T02_00_index.html">
-   MWW 01
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     Grundwasserbewirtschaftung
-    </span>
-    <span class="pre">
-     mit
-    </span>
-    <span class="pre">
-     Computermodellen
-    </span>
-   </code>
+  <a class="reference internal" href="../Darcy_Column/Darcy.html">
+   Darcy Law
   </a>
  </li>
 </ul>
@@ -189,7 +178,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/Grabenströmung/Uebersicht.ipynb"
+        <a href="https://mybinder.org/v2/gh/legrabow/HydroTeaching_WiP_jb.git/main?urlpath=tree/Grabenströmung/Uebersicht.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -203,6 +192,24 @@ title="Launch on Binder"
   </span>
 <span class="headerbtn__text-container">Binder</span>
 </a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="initThebeSBT()"
+  class="headerbtn headerbtn-launch-thebe"
+  data-toggle="tooltip"
+data-placement="left"
+title="Launch Thebe"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="headerbtn__text-container">Live Code</span>
+</button>
 
       </li>
       
@@ -232,7 +239,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://github.com/executablebooks/jupyter-book"
+        <a href="https://github.com/legrabow/HydroTeaching_WiP_jb.git"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -249,7 +256,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FGrabenströmung/Uebersicht.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/legrabow/HydroTeaching_WiP_jb.git/issues/new?title=Issue%20on%20page%20%2FGrabenströmung/Uebersicht.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -417,8 +424,8 @@ title="Print to PDF"
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
+            repo: "legrabow/HydroTeaching_WiP_jb.git",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",
