@@ -1,0 +1,621 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>&lt;no title&gt; &#8212; Collection of HydroTeaching</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/TUD_logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Collection of HydroTeaching</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../README.html">
+                    HydroTeaching_WiP_jb
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Grabenstr%C3%B6mung/MWW01_T02_00_index.html">
+   MWW 01
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     Grundwasserbewirtschaftung
+    </span>
+    <span class="pre">
+     mit
+    </span>
+    <span class="pre">
+     Computermodellen
+    </span>
+   </code>
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/Trennstromlinie/Trennstromlinie.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FTrennstromlinie/Trennstromlinie.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/Trennstromlinie/Trennstromlinie.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1><no title></h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <p><img src='../IMG/TUD_logo.png' align='right' width='15%'></img></p>
+<p><img src='abstracted_map_v3.png'></img></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">import</span> <span class="nn">time</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">ymax_conf</span><span class="p">(</span><span class="n">Q</span><span class="p">,</span> <span class="n">K</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Get the </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">ymax</span> <span class="o">=</span> <span class="n">Q</span><span class="o">/</span><span class="p">(</span><span class="mf">2.</span><span class="o">*</span><span class="n">K</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">*</span><span class="n">b</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">ymax</span>
+
+<span class="k">def</span> <span class="nf">x0_conf</span><span class="p">(</span><span class="n">Q</span><span class="p">,</span> <span class="n">K</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="n">x0</span> <span class="o">=</span> <span class="o">-</span><span class="n">Q</span><span class="o">/</span><span class="p">(</span><span class="mf">2.</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">K</span><span class="o">*</span><span class="n">i</span><span class="o">*</span><span class="n">b</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">x0</span>
+
+<span class="k">def</span> <span class="nf">ymax_unconf</span><span class="p">(</span><span class="n">Q</span><span class="p">,</span> <span class="n">L</span><span class="p">,</span> <span class="n">K</span><span class="p">,</span> <span class="n">h1</span><span class="p">,</span> <span class="n">h2</span><span class="p">):</span>
+    <span class="n">ymax</span> <span class="o">=</span> <span class="n">Q</span><span class="o">*</span><span class="n">L</span><span class="o">/</span><span class="p">(</span><span class="n">K</span><span class="o">*</span><span class="p">(</span><span class="n">h1</span><span class="o">**</span><span class="mi">2</span><span class="o">-</span><span class="n">h2</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">ymax</span>
+    
+<span class="k">def</span> <span class="nf">x0_unconf</span><span class="p">(</span><span class="n">Q</span><span class="p">,</span> <span class="n">L</span><span class="p">,</span> <span class="n">K</span><span class="p">,</span> <span class="n">h1</span><span class="p">,</span> <span class="n">h2</span><span class="p">):</span>
+    <span class="n">x0</span> <span class="o">=</span> <span class="o">-</span><span class="n">Q</span><span class="o">*</span><span class="n">L</span><span class="o">/</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">K</span><span class="o">*</span><span class="p">(</span><span class="n">h1</span><span class="o">**</span><span class="mi">2</span><span class="o">-</span><span class="n">h2</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">x0</span>
+
+<span class="k">def</span> <span class="nf">TSL_conf</span><span class="p">(</span><span class="n">Q</span><span class="p">,</span> <span class="n">K</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">dist_iso</span><span class="p">,</span> <span class="n">plot_coor</span><span class="p">):</span>
+    <span class="n">h2</span> <span class="o">=</span> <span class="n">h1</span> <span class="o">-</span> <span class="n">i</span> <span class="o">*</span> <span class="p">(</span><span class="n">x1</span> <span class="o">-</span> <span class="n">x2</span><span class="p">)</span>
+    <span class="n">L</span> <span class="o">=</span> <span class="n">x1</span> <span class="o">-</span> <span class="n">x2</span>
+
+    <span class="n">ymax</span> <span class="o">=</span> <span class="n">ymax_conf</span><span class="p">(</span><span class="n">Q</span><span class="p">,</span> <span class="n">K</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+    <span class="c1">#x0 = x0_conf(Q, K, i, b)</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="n">ymax</span><span class="p">,</span> <span class="n">ymax</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">y</span><span class="o">/</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">K</span><span class="o">*</span><span class="n">i</span><span class="o">*</span><span class="n">b</span><span class="o">*</span><span class="n">y</span><span class="o">/</span><span class="n">Q</span><span class="p">))</span>
+    
+    
+    <span class="n">h_iso</span> <span class="o">=</span> <span class="n">isohypsen_conf</span><span class="p">(</span><span class="n">h1</span><span class="p">,</span> <span class="n">h2</span><span class="p">,</span> <span class="n">x1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">K</span><span class="p">,</span> <span class="n">Q</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">x_iso_tilted</span><span class="p">,</span> <span class="n">y_iso_tilted</span><span class="p">)</span>
+
+    <span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="n">x_iso_tilted</span><span class="p">,</span> <span class="n">y_iso_tilted</span><span class="p">,</span> <span class="n">h_iso</span><span class="p">,</span> <span class="n">dist_iso</span><span class="p">,</span> <span class="n">plot_coor</span><span class="p">)</span>
+
+    
+<span class="k">def</span> <span class="nf">TSL_unconf</span><span class="p">(</span><span class="n">Q</span><span class="p">,</span> <span class="n">K</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">dist_iso</span><span class="p">,</span> <span class="n">plot_coor</span><span class="p">):</span>
+    <span class="n">h2</span> <span class="o">=</span> <span class="n">h1</span> <span class="o">-</span> <span class="n">i</span> <span class="o">*</span> <span class="p">(</span><span class="n">x1</span> <span class="o">-</span> <span class="n">x2</span><span class="p">)</span>
+    <span class="n">L</span> <span class="o">=</span> <span class="n">x1</span> <span class="o">-</span> <span class="n">x2</span>
+
+    <span class="n">ymax</span> <span class="o">=</span> <span class="n">ymax_unconf</span><span class="p">(</span><span class="n">Q</span><span class="p">,</span> <span class="n">L</span><span class="p">,</span> <span class="n">K</span><span class="p">,</span> <span class="n">h1</span><span class="p">,</span> <span class="n">h2</span><span class="p">)</span>
+    <span class="c1">#x0 = x0_unconf(Q, L, K, h1, h2)</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="n">ymax</span><span class="p">,</span> <span class="n">ymax</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">y</span><span class="o">/</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">K</span><span class="o">*</span><span class="p">(</span><span class="n">h1</span><span class="o">**</span><span class="mi">2</span><span class="o">-</span><span class="n">h2</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">y</span><span class="o">/</span><span class="p">(</span><span class="n">Q</span> <span class="o">*</span> <span class="n">L</span><span class="p">)))</span>
+    
+    <span class="n">h_iso</span> <span class="o">=</span> <span class="n">isohypsen_unconf</span><span class="p">(</span><span class="n">h1</span><span class="p">,</span> <span class="n">h2</span><span class="p">,</span> <span class="n">x1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">K</span><span class="p">,</span> <span class="n">Q</span><span class="p">,</span> <span class="n">x_iso_tilted</span><span class="p">,</span> <span class="n">y_iso_tilted</span><span class="p">)</span>
+
+    <span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="n">x_iso_tilted</span><span class="p">,</span> <span class="n">y_iso_tilted</span><span class="p">,</span> <span class="n">h_iso</span><span class="p">,</span> <span class="n">dist_iso</span><span class="p">,</span> <span class="n">plot_coor</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">isohypsen_conf</span><span class="p">(</span><span class="n">h1</span><span class="p">,</span> <span class="n">h2</span><span class="p">,</span> <span class="n">x1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">K</span><span class="p">,</span> <span class="n">Q</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="n">h_r1</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">h_iso</span> <span class="o">=</span> <span class="p">(</span><span class="n">h2</span><span class="o">-</span><span class="n">h1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="n">x1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">x2</span><span class="o">-</span><span class="n">x1</span><span class="p">)</span> <span class="o">+</span><span class="n">h1</span> <span class="o">+</span> <span class="n">Q</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">y</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="n">r1</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">K</span> <span class="o">*</span> <span class="n">b</span><span class="p">)</span> <span class="o">+</span> <span class="n">h_r1</span>
+    <span class="k">return</span> <span class="n">h_iso</span>
+
+<span class="k">def</span> <span class="nf">isohypsen_unconf</span><span class="p">(</span><span class="n">h1</span><span class="p">,</span> <span class="n">h2</span><span class="p">,</span> <span class="n">x1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">K</span><span class="p">,</span> <span class="n">Q</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="n">h_r1</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">h_iso</span> <span class="o">=</span> <span class="p">(</span><span class="n">h2</span><span class="o">-</span><span class="n">h1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="n">x1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">x2</span><span class="o">-</span><span class="n">x1</span><span class="p">)</span> <span class="o">+</span><span class="n">h1</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">Q</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">y</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="n">r1</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">K</span><span class="p">)</span> <span class="o">+</span> <span class="n">h_r1</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">h_iso</span>
+   
+
+<span class="k">def</span> <span class="nf">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="n">x_iso</span><span class="p">,</span> <span class="n">y_iso</span><span class="p">,</span> <span class="n">h_iso</span><span class="p">,</span> <span class="n">dist_iso</span><span class="p">,</span> <span class="n">plot_coor</span><span class="p">):</span>
+    <span class="n">tsl_normal</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">([</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">])</span>
+    <span class="n">iso_normal</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">stack</span><span class="p">([</span><span class="n">x_iso</span><span class="p">,</span><span class="n">y_iso</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">iso_tilted</span><span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">tensordot</span><span class="p">(</span><span class="n">rotation_matrix</span><span class="p">,</span> <span class="n">iso_normal</span><span class="p">,</span> <span class="n">axes</span><span class="o">=</span><span class="p">([</span><span class="mi">1</span><span class="p">],[</span><span class="mi">2</span><span class="p">]))</span>
+    <span class="n">tsl_tilted</span> <span class="o">=</span> <span class="n">rotation_matrix</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">tsl_normal</span><span class="p">)</span>
+    
+    <span class="c1"># Erstellen der Figure und der Axes</span>
+    <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">20</span><span class="p">))</span>
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
+
+    <span class="c1"># Bild in die Axes einfügen</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+    <span class="c1"># Grid in die Box einfügen</span>
+    <span class="n">ax_child</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">inset_axes</span><span class="p">([</span><span class="n">pxl_l</span><span class="p">,</span> <span class="n">pxl_o</span><span class="p">,</span> <span class="n">pxl_r</span><span class="o">-</span><span class="n">pxl_l</span><span class="p">,</span><span class="n">pxl_u</span><span class="o">-</span><span class="n">pxl_o</span><span class="p">],</span> <span class="n">transform</span><span class="o">=</span><span class="n">ax</span><span class="o">.</span><span class="n">transData</span><span class="p">)</span>
+    <span class="n">ax_child</span><span class="o">.</span><span class="n">patch</span><span class="o">.</span><span class="n">set_alpha</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>
+    <span class="n">ax_child</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+
+    <span class="n">ax_child</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">([</span><span class="n">x_min</span><span class="p">,</span><span class="n">x_max</span><span class="p">])</span>
+    <span class="n">ax_child</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">([</span><span class="n">y_min</span><span class="p">,</span><span class="n">y_max</span><span class="p">])</span>
+
+    <span class="n">ax_child</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tsl_tilted</span><span class="p">[</span><span class="mi">0</span><span class="p">,:],</span> <span class="n">tsl_tilted</span><span class="p">[</span><span class="mi">1</span><span class="p">,:],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">)</span>
+    
+    <span class="n">positions</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">h_iso</span><span class="p">)),</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">h_iso</span><span class="p">),</span> <span class="n">dist_iso</span><span class="p">)</span>
+    <span class="n">ctr</span> <span class="o">=</span> <span class="n">ax_child</span><span class="o">.</span><span class="n">contour</span><span class="p">(</span><span class="n">iso_tilted</span><span class="p">[</span><span class="mi">0</span><span class="p">,:,:],</span> <span class="n">iso_tilted</span><span class="p">[</span><span class="mi">1</span><span class="p">,:,:],</span> <span class="n">h_iso</span><span class="p">,</span> <span class="n">levels</span><span class="o">=</span><span class="n">positions</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">)</span>
+    <span class="n">ax_child</span><span class="o">.</span><span class="n">clabel</span><span class="p">(</span><span class="n">ctr</span><span class="p">,</span> <span class="n">ctr</span><span class="o">.</span><span class="n">levels</span><span class="p">,</span> <span class="n">inline</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+    
+    <span class="k">if</span> <span class="n">plot_coor</span><span class="p">:</span>
+        <span class="n">ax_child</span><span class="o">.</span><span class="n">arrow</span><span class="p">(</span><span class="n">y_arrow_start</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span><span class="n">y_arrow_start</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span>
+                       <span class="n">y_arrow_end</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">y_arrow_start</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span>
+                       <span class="n">y_arrow_end</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">y_arrow_start</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span>
+                       <span class="n">head_width</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">)</span>
+        <span class="n">ax_child</span><span class="o">.</span><span class="n">arrow</span><span class="p">(</span><span class="n">x_arrow_start</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span><span class="n">x_arrow_start</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span>
+                       <span class="n">x_arrow_end</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">x_arrow_start</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span>
+                       <span class="n">x_arrow_end</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">x_arrow_start</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span>
+                       <span class="n">head_width</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">)</span>
+    <span class="c1">#fig.plot(ax=ax_child)</span>
+
+    <span class="c1"># Ausschalten aller automatischen Axenbeschriftungen</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s2">&quot;off&quot;</span><span class="p">)</span>
+    <span class="n">ax_child</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s2">&quot;off&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span>
+
+<span class="k">def</span> <span class="nf">fmt</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">x</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="k">if</span> <span class="n">s</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;0&quot;</span><span class="p">):</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">x</span><span class="si">:</span><span class="s2">.0f</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="k">return</span> <span class="sa">rf</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">s</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">if</span> <span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s2">&quot;text.usetex&quot;</span><span class="p">]</span> <span class="k">else</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">s</span><span class="si">}</span><span class="s2">&quot;</span>
+
+<span class="k">def</span> <span class="nf">interactive_plot</span><span class="p">(</span><span class="n">flow_type</span><span class="p">):</span>
+    <span class="n">wgts</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Q&quot;</span><span class="p">:</span><span class="n">widgets</span><span class="o">.</span><span class="n">FloatSlider</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="mf">0.01</span><span class="p">,</span><span class="nb">min</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mf">0.01</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;Well Discharge, $\frac{m^3}</span><span class="si">{s}</span><span class="s2">$&quot;</span><span class="p">,</span><span class="n">style</span><span class="o">=</span> <span class="p">{</span><span class="s1">&#39;description_width&#39;</span><span class="p">:</span> <span class="s1">&#39;initial&#39;</span><span class="p">}),</span>
+               <span class="s2">&quot;K&quot;</span><span class="p">:</span><span class="n">widgets</span><span class="o">.</span><span class="n">FloatLogSlider</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="mf">6E-4</span><span class="p">,</span><span class="n">base</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span><span class="nb">min</span><span class="o">=-</span><span class="mi">6</span><span class="p">,</span> <span class="nb">max</span><span class="o">=-</span><span class="mi">2</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span><span class="n">readout</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">readout_format</span><span class="o">=</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="n">description</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;Hydraulic Conductivity, $\frac</span><span class="si">{m}{s}</span><span class="s2">$&quot;</span><span class="p">,</span><span class="n">style</span><span class="o">=</span> <span class="p">{</span><span class="s1">&#39;description_width&#39;</span><span class="p">:</span> <span class="s1">&#39;initial&#39;</span><span class="p">}),</span>
+               <span class="s2">&quot;i&quot;</span><span class="p">:</span><span class="n">widgets</span><span class="o">.</span><span class="n">FloatSlider</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="mf">0.0017</span><span class="p">,</span><span class="nb">min</span><span class="o">=-</span><span class="mf">0.006</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="mf">0.006</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mf">0.0001</span><span class="p">,</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;Background Gradient&quot;</span><span class="p">,</span><span class="n">style</span><span class="o">=</span> <span class="p">{</span><span class="s1">&#39;description_width&#39;</span><span class="p">:</span> <span class="s1">&#39;initial&#39;</span><span class="p">},</span> <span class="n">readout_format</span><span class="o">=</span><span class="s1">&#39;.4f&#39;</span><span class="p">),</span>
+               <span class="s2">&quot;dist_iso&quot;</span><span class="p">:</span><span class="n">widgets</span><span class="o">.</span><span class="n">FloatSlider</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="nb">min</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;Resolution of Isohypses&quot;</span><span class="p">,</span><span class="n">style</span><span class="o">=</span> <span class="p">{</span><span class="s1">&#39;description_width&#39;</span><span class="p">:</span> <span class="s1">&#39;initial&#39;</span><span class="p">}),</span>
+               <span class="s2">&quot;plot_coor&quot;</span><span class="p">:</span><span class="n">widgets</span><span class="o">.</span><span class="n">Checkbox</span><span class="p">(</span><span class="kc">False</span><span class="p">,</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;Add coordinate axis&quot;</span><span class="p">,</span><span class="n">style</span><span class="o">=</span> <span class="p">{</span><span class="s1">&#39;description_width&#39;</span><span class="p">:</span> <span class="s1">&#39;initial&#39;</span><span class="p">}),</span>
+               <span class="s2">&quot;continuous_update&quot;</span><span class="p">:</span><span class="kc">False</span><span class="p">}</span>
+    <span class="k">if</span> <span class="n">flow_type</span> <span class="o">==</span> <span class="s2">&quot;Confined&quot;</span><span class="p">:</span>
+        <span class="n">func</span> <span class="o">=</span> <span class="n">TSL_conf</span>
+        <span class="n">wgts</span><span class="p">[</span><span class="s2">&quot;b&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">FloatSlider</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="mi">120</span><span class="p">,</span><span class="nb">min</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;Aquifer thickness, m&quot;</span><span class="p">,</span><span class="n">style</span><span class="o">=</span> <span class="p">{</span><span class="s1">&#39;description_width&#39;</span><span class="p">:</span> <span class="s1">&#39;initial&#39;</span><span class="p">})</span>
+    <span class="k">elif</span> <span class="n">flow_type</span> <span class="o">==</span> <span class="s2">&quot;Unconfined&quot;</span><span class="p">:</span>
+        <span class="n">func</span> <span class="o">=</span> <span class="n">TSL_unconf</span>
+        
+    <span class="n">interact_manual</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="o">**</span><span class="n">wgts</span><span class="p">)</span>
+    
+    
+<span class="n">theta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="mi">29</span><span class="p">)</span>
+<span class="n">c</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
+<span class="n">rotation_matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(((</span><span class="n">c</span><span class="p">,</span> <span class="o">-</span><span class="n">s</span><span class="p">),</span> <span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">c</span><span class="p">)))</span>
+<span class="n">inv_theta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="o">-</span><span class="mi">29</span><span class="p">)</span>
+<span class="n">c</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">inv_theta</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">inv_theta</span><span class="p">)</span>
+<span class="n">inv_rotation_matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(((</span><span class="n">c</span><span class="p">,</span> <span class="o">-</span><span class="n">s</span><span class="p">),</span> <span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">c</span><span class="p">)))</span>
+
+<span class="n">readout_format</span><span class="o">=</span><span class="s1">&#39;.3f&#39;</span>
+<span class="n">y_arrow_end</span> <span class="o">=</span> <span class="n">rotation_matrix</span><span class="o">.</span><span class="n">dot</span><span class="p">([[</span><span class="mi">0</span><span class="p">],[</span><span class="mi">2000</span><span class="p">]])</span>
+<span class="n">y_arrow_start</span> <span class="o">=</span> <span class="n">rotation_matrix</span><span class="o">.</span><span class="n">dot</span><span class="p">([[</span><span class="mi">0</span><span class="p">],[</span><span class="o">-</span><span class="mi">2000</span><span class="p">]])</span>
+<span class="n">x_arrow_start</span> <span class="o">=</span> <span class="n">rotation_matrix</span><span class="o">.</span><span class="n">dot</span><span class="p">([[</span><span class="o">-</span><span class="mi">4000</span><span class="p">],[</span><span class="mi">0</span><span class="p">]])</span>
+<span class="n">x_arrow_end</span> <span class="o">=</span> <span class="n">rotation_matrix</span><span class="o">.</span><span class="n">dot</span><span class="p">([[</span><span class="mi">2000</span><span class="p">],[</span><span class="mi">0</span><span class="p">]])</span>
+
+
+<span class="n">xscale</span> <span class="o">=</span> <span class="mf">1.</span> <span class="o">*</span> <span class="mi">2000</span> <span class="o">/</span> <span class="p">(</span><span class="mf">0.48</span> <span class="o">+</span> <span class="mf">0.35</span><span class="p">)</span>
+<span class="n">yscale</span> <span class="o">=</span> <span class="mf">1.</span> <span class="o">*</span> <span class="mi">2000</span> <span class="o">/</span> <span class="p">(</span><span class="mf">0.125</span> <span class="o">+</span> <span class="mf">0.265</span><span class="p">)</span>
+<span class="n">x_min</span> <span class="o">=</span> <span class="o">-</span><span class="mi">4</span> <span class="o">*</span> <span class="n">xscale</span>
+<span class="n">x_max</span> <span class="o">=</span> <span class="mf">1.18</span> <span class="o">*</span> <span class="n">xscale</span>
+<span class="n">y_min</span> <span class="o">=</span> <span class="o">-</span><span class="mf">1.07</span> <span class="o">*</span> <span class="n">yscale</span>
+<span class="n">y_max</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">*</span> <span class="n">yscale</span>
+<span class="n">x_iso</span><span class="p">,</span> <span class="n">y_iso</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">x_min</span><span class="p">,</span> <span class="n">x_max</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">y_min</span><span class="p">,</span> <span class="n">y_max</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="n">iso_normal</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">stack</span><span class="p">([</span><span class="n">x_iso</span><span class="p">,</span><span class="n">y_iso</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">iso_tilted</span><span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">tensordot</span><span class="p">(</span><span class="n">inv_rotation_matrix</span><span class="p">,</span> <span class="n">iso_normal</span><span class="p">,</span> <span class="n">axes</span><span class="o">=</span><span class="p">([</span><span class="mi">1</span><span class="p">],[</span><span class="mi">2</span><span class="p">]))</span>
+<span class="n">x_iso_tilted</span> <span class="o">=</span> <span class="n">iso_tilted</span><span class="p">[</span><span class="mi">0</span><span class="p">,:,:]</span>
+<span class="n">y_iso_tilted</span> <span class="o">=</span> <span class="n">iso_tilted</span><span class="p">[</span><span class="mi">1</span><span class="p">,:,:]</span>
+
+<span class="n">r1</span> <span class="o">=</span> <span class="mi">10000</span>
+
+<span class="n">pxl_l</span> <span class="o">=</span> <span class="mi">27</span>
+<span class="n">pxl_o</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="n">pxl_r</span> <span class="o">=</span> <span class="mi">2520</span>
+<span class="n">pxl_u</span> <span class="o">=</span> <span class="mi">2125</span>
+
+<span class="n">x1</span> <span class="o">=</span> <span class="o">-</span><span class="mi">200</span>
+<span class="n">x2</span> <span class="o">=</span> <span class="mi">400</span>
+<span class="n">h1</span> <span class="o">=</span> <span class="mi">61</span>
+
+
+<span class="n">layout</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="s1">&#39;auto&#39;</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="s1">&#39;40px&#39;</span><span class="p">)</span>
+
+<span class="c1"># Einladen der Draufsicht</span>
+<span class="n">img</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s2">&quot;abstracted_map_v3.png&quot;</span><span class="p">)</span>
+ 
+
+<span class="n">interact</span><span class="p">(</span><span class="n">interactive_plot</span><span class="p">,</span> 
+         <span class="n">flow_type</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Dropdown</span><span class="p">(</span><span class="n">options</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Confined&quot;</span><span class="p">,</span> <span class="s2">&quot;Unconfined&quot;</span><span class="p">],</span><span class="n">value</span><span class="o">=</span><span class="s2">&quot;Confined&quot;</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Aquifer Type&quot;</span><span class="p">),</span>
+        <span class="n">continuous_update</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">
+{"version_major": 2, "version_minor": 0, "model_id": "7f880a60cbc04358aa93cec71a8ec8e8"}
+</script><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;function __main__.interactive_plot(flow_type)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+
+
+<script type="application/vnd.jupyter.widget-state+json">
+{"state": {"1a23eeae993044efb97be0462e654936": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": "40px", "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": "auto"}}, "c2da45accdc1411ba5cd114abc769032": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "0774c9b4af6346b6849a4a3d4f0ca63c": {"model_name": "DescriptionStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "DescriptionStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": ""}}, "c9868a383d6e4dc2a354a37837f3f306": {"model_name": "DropdownModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "DropdownModel", "_options_labels": ["Confined", "Unconfined"], "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "DropdownView", "description": "Aquifer Type", "description_tooltip": null, "disabled": false, "index": 0, "layout": "IPY_MODEL_c2da45accdc1411ba5cd114abc769032", "style": "IPY_MODEL_0774c9b4af6346b6849a4a3d4f0ca63c"}}, "0a621efccb4d4d13a6b2f8f32534d521": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "7f880a60cbc04358aa93cec71a8ec8e8": {"model_name": "VBoxModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": ["widget-interact"], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "VBoxModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "VBoxView", "box_style": "", "children": ["IPY_MODEL_c9868a383d6e4dc2a354a37837f3f306", "IPY_MODEL_628131ed554e4622968ab2d769a5ef6d"], "layout": "IPY_MODEL_0a621efccb4d4d13a6b2f8f32534d521"}}, "15b608a55d404d0eadb79201ecd97ee1": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "628131ed554e4622968ab2d769a5ef6d": {"model_name": "OutputModel", "model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_15b608a55d404d0eadb79201ecd97ee1", "msg_id": "", "outputs": [{"output_type": "display_data", "metadata": {}, "data": {"text/plain": "interactive(children=(FloatSlider(value=0.01, description='Well Discharge, $\\\\frac{m^3}{s}$', max=1.0, step=0.\u2026", "application/vnd.jupyter.widget-view+json": {"version_major": 2, "version_minor": 0, "model_id": "cabe4a3284fa4b9b9ded7dd3aba0a11d"}}}]}}, "2b899a2d841a42d6838fbe5a0c434f51": {"model_name": "SliderStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "SliderStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": "initial", "handle_color": null}}, "597e67eea069434d8927ddb52c962424": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "20b44cc30cd948f1b7115ab261d2d66d": {"model_name": "FloatSliderModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "FloatSliderModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "FloatSliderView", "continuous_update": true, "description": "Well Discharge, $\\frac{m^3}{s}$", "description_tooltip": null, "disabled": false, "layout": "IPY_MODEL_597e67eea069434d8927ddb52c962424", "max": 1.0, "min": 0.0, "orientation": "horizontal", "readout": true, "readout_format": ".2f", "step": 0.01, "style": "IPY_MODEL_2b899a2d841a42d6838fbe5a0c434f51", "value": 0.01}}, "3f3962efcaeb432ba3c02911b4aa9101": {"model_name": "SliderStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "SliderStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": "initial", "handle_color": null}}, "eb4e0a9b8e7c4f7ba4b4fa9f28e9d789": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "b21738abdcc64452aeb69c55650d37e0": {"model_name": "FloatLogSliderModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "FloatLogSliderModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "FloatLogSliderView", "base": 10.0, "continuous_update": true, "description": "Hydraulic Conductivity, $\\frac{m}{s}$", "description_tooltip": null, "disabled": false, "layout": "IPY_MODEL_eb4e0a9b8e7c4f7ba4b4fa9f28e9d789", "max": -2.0, "min": -6.0, "orientation": "horizontal", "readout": true, "readout_format": "e", "step": 0.1, "style": "IPY_MODEL_3f3962efcaeb432ba3c02911b4aa9101", "value": 0.0006}}, "8c7f71faee8d47cea3a55ce8d8cf24dc": {"model_name": "SliderStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "SliderStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": "initial", "handle_color": null}}, "b054d54415054e238f4bdb9879e1a151": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "57cde2eb1c55481aaeca62de1b7e1b11": {"model_name": "FloatSliderModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "FloatSliderModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "FloatSliderView", "continuous_update": true, "description": "Background Gradient", "description_tooltip": null, "disabled": false, "layout": "IPY_MODEL_b054d54415054e238f4bdb9879e1a151", "max": 0.006, "min": -0.006, "orientation": "horizontal", "readout": true, "readout_format": ".4f", "step": 0.0001, "style": "IPY_MODEL_8c7f71faee8d47cea3a55ce8d8cf24dc", "value": 0.0017}}, "9c008bced6454071b49897a4f2011495": {"model_name": "SliderStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "SliderStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": "initial", "handle_color": null}}, "674bb3bb87d642cab87236b1b38a4df2": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "de6592cba0104ce6a8d3914a0e8b3136": {"model_name": "FloatSliderModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "FloatSliderModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "FloatSliderView", "continuous_update": true, "description": "Resolution of Isohypses", "description_tooltip": null, "disabled": false, "layout": "IPY_MODEL_674bb3bb87d642cab87236b1b38a4df2", "max": 10.0, "min": 0.5, "orientation": "horizontal", "readout": true, "readout_format": ".2f", "step": 0.5, "style": "IPY_MODEL_9c008bced6454071b49897a4f2011495", "value": 1.0}}, "667ace7073b746698e8797e2defcc878": {"model_name": "DescriptionStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "DescriptionStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": "initial"}}, "f7e3c5840d5c42a6bea324f55adcb9ec": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "a2c95b898c8f4743ac8ae01b06a862c1": {"model_name": "CheckboxModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "CheckboxModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "CheckboxView", "description": "Add coordinate axis", "description_tooltip": null, "disabled": false, "indent": true, "layout": "IPY_MODEL_f7e3c5840d5c42a6bea324f55adcb9ec", "style": "IPY_MODEL_667ace7073b746698e8797e2defcc878", "value": false}}, "dde8b5566ece461f9789a18507c53af6": {"model_name": "SliderStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "SliderStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": "initial", "handle_color": null}}, "c1712e06040845f18dd65448fd3e270f": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "313a90243d094dbfb91872f11c7823a7": {"model_name": "FloatSliderModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "FloatSliderModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "FloatSliderView", "continuous_update": true, "description": "Aquifer thickness, m", "description_tooltip": null, "disabled": false, "layout": "IPY_MODEL_c1712e06040845f18dd65448fd3e270f", "max": 200.0, "min": 1.0, "orientation": "horizontal", "readout": true, "readout_format": ".2f", "step": 1.0, "style": "IPY_MODEL_dde8b5566ece461f9789a18507c53af6", "value": 120.0}}, "ebf34f1d9f534db7b31120b624314c76": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "cabe4a3284fa4b9b9ded7dd3aba0a11d": {"model_name": "VBoxModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": ["widget-interact"], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "VBoxModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "VBoxView", "box_style": "", "children": ["IPY_MODEL_20b44cc30cd948f1b7115ab261d2d66d", "IPY_MODEL_b21738abdcc64452aeb69c55650d37e0", "IPY_MODEL_57cde2eb1c55481aaeca62de1b7e1b11", "IPY_MODEL_313a90243d094dbfb91872f11c7823a7", "IPY_MODEL_de6592cba0104ce6a8d3914a0e8b3136", "IPY_MODEL_a2c95b898c8f4743ac8ae01b06a862c1", "IPY_MODEL_d468a8e5213a44ecb98ae0ef425c472c", "IPY_MODEL_17451c9395d048fc97248c6eed19198b"], "layout": "IPY_MODEL_ebf34f1d9f534db7b31120b624314c76"}}, "52f339b1248d4246955357881da9808a": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "1757649921bb4c93a88904fc252d0791": {"model_name": "ButtonStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "ButtonStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "button_color": null, "font_weight": ""}}, "d468a8e5213a44ecb98ae0ef425c472c": {"model_name": "ButtonModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "ButtonModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "ButtonView", "button_style": "", "description": "Run Interact", "disabled": false, "icon": "", "layout": "IPY_MODEL_52f339b1248d4246955357881da9808a", "style": "IPY_MODEL_1757649921bb4c93a88904fc252d0791", "tooltip": ""}}, "14b300dfd5764a699a6e11b3fbd72475": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "17451c9395d048fc97248c6eed19198b": {"model_name": "OutputModel", "model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_14b300dfd5764a699a6e11b3fbd72475", "msg_id": "", "outputs": []}}}, "version_major": 2, "version_minor": 0}
+</script>
+
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./Trennstromlinie"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Thomas Reimann, Leonard Grabow<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

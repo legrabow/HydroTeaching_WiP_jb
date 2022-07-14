@@ -1,0 +1,1441 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Übersicht und Videos - Bsp. 2D Strömung in einem synthetischem Einzugsgebiet &#8212; Collection of HydroTeaching</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/TUD_logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Collection of HydroTeaching</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../README.html">
+                    HydroTeaching_WiP_jb
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Grabenstr%C3%B6mung/MWW01_T02_00_index.html">
+   MWW 01
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     Grundwasserbewirtschaftung
+    </span>
+    <span class="pre">
+     mit
+    </span>
+    <span class="pre">
+     Computermodellen
+    </span>
+   </code>
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/Flopy/01_MODELL_INITIIEREN_AWH2015_p432.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FFlopy/01_MODELL_INITIIEREN_AWH2015_p432.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/Flopy/01_MODELL_INITIIEREN_AWH2015_p432.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#allgemeine-voraussetzungen-fur-diese-ubung">
+   Allgemeine Voraussetzungen für diese Übung
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#aufbau-des-modells-mit-flopy">
+     Aufbau des Modells mit FloPy
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#einbinden-der-notwendigen-bibliotheken">
+       Einbinden der notwendigen Bibliotheken
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#einbinden-aller-notewendigen-packete">
+   Einbinden aller notewendigen Packete
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#allgemeine-definition-des-modells">
+   Allgemeine Definition des Modells
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#einstellungen-zum-plotten">
+     Einstellungen zum Plotten
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#strukturiertes-grid">
+     Strukturiertes Grid
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#erzeugen-des-modflow-modells-und-der-jeweiligen-modflow-package-objekte">
+   Erzeugen des MODFLOW-Modells und der jeweiligen (MODFLOW)Package-Objekte
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modflow-package">
+     MODFLOW-Package
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dis-package">
+     DIS-Package
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bas-package">
+     BAS-Package
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#oc-package">
+     OC-Package
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#nwt-package">
+     NWT-Package
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rch-package">
+     RCH-Package
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#upw-package">
+     UPW-Package
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#riv-package">
+     RIV-Package
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#theoretischer-aufbau-der-tabelle">
+       Theoretischer Aufbau der Tabelle
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#erstellen-der-tabelle">
+       Erstellen der Tabelle
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#wel-package">
+     WEL-Package
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kontrolle-der-bisherigen-eingaben">
+   Kontrolle der bisherigen Eingaben
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ausfuhren-des-modells">
+   Ausführen des Modells
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Übersicht und Videos - Bsp. 2D Strömung in einem synthetischem Einzugsgebiet</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#allgemeine-voraussetzungen-fur-diese-ubung">
+   Allgemeine Voraussetzungen für diese Übung
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#aufbau-des-modells-mit-flopy">
+     Aufbau des Modells mit FloPy
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#einbinden-der-notwendigen-bibliotheken">
+       Einbinden der notwendigen Bibliotheken
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#einbinden-aller-notewendigen-packete">
+   Einbinden aller notewendigen Packete
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#allgemeine-definition-des-modells">
+   Allgemeine Definition des Modells
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#einstellungen-zum-plotten">
+     Einstellungen zum Plotten
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#strukturiertes-grid">
+     Strukturiertes Grid
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#erzeugen-des-modflow-modells-und-der-jeweiligen-modflow-package-objekte">
+   Erzeugen des MODFLOW-Modells und der jeweiligen (MODFLOW)Package-Objekte
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modflow-package">
+     MODFLOW-Package
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dis-package">
+     DIS-Package
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bas-package">
+     BAS-Package
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#oc-package">
+     OC-Package
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#nwt-package">
+     NWT-Package
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rch-package">
+     RCH-Package
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#upw-package">
+     UPW-Package
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#riv-package">
+     RIV-Package
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#theoretischer-aufbau-der-tabelle">
+       Theoretischer Aufbau der Tabelle
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#erstellen-der-tabelle">
+       Erstellen der Tabelle
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#wel-package">
+     WEL-Package
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kontrolle-der-bisherigen-eingaben">
+   Kontrolle der bisherigen Eingaben
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ausfuhren-des-modells">
+   Ausführen des Modells
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="ubersicht-und-videos-bsp-2d-stromung-in-einem-synthetischem-einzugsgebiet">
+<h1>Übersicht und Videos - Bsp. 2D Strömung in einem synthetischem Einzugsgebiet<a class="headerlink" href="#ubersicht-und-videos-bsp-2d-stromung-in-einem-synthetischem-einzugsgebiet" title="Permalink to this headline">#</a></h1>
+<p><strong>Situation:</strong></p>
+<p>Dieses Beispiel betrachtet einen synthetischen und stark idealisierten Grundwasserleiter (Dieses Beispiel wird häufig in unseren Lehrveranstaltungen verwendet):</p>
+<ul class="simple">
+<li><p>Die Unterkante des Grundwasserleiters befindet sich bei 250 m NHN und die Geländeoberkante liegt bei 265 m NHN.</p></li>
+<li><p>Das Gebiet wird links und rechts von definierten Potentialhöhen begrenzt.</p></li>
+<li><p>Die hydraulische Leitfähigkeit und die Grundwasserneubildung werden als räumlich variable Parameter zoniert (s. nachfolgende Abbildung).</p></li>
+<li><p>Weiterhin befinden sich im Gebiet ein Fluss mit kolmatierter Sohle. Der Flusswasserstand beträgt am linken unteren Rand 260 m NHN und sinkt in Richtung rechter oberer Rand (Ecke der höher leitfähigen Zone) auf 258 m NHN ab. Die Sohle des Flusses befindet sich 5 m unterhalb des Flusswasserstandes. Der Leitwert beträgt ca. 1000 <span class="math notranslate nohighlight">\(\frac{m^2}{d}\)</span>.</p></li>
+<li><p>Im Gebiet wird aus zwei Brunnen Wasser entnommen: W1 fördert 2000 <span class="math notranslate nohighlight">\(\frac{m^3}{d}\)</span> und W2 fördert 5000 <span class="math notranslate nohighlight">\(\frac{m^3}{d}\)</span>.</p></li>
+</ul>
+<p><img alt="" src="Flopy/images/MAP_well.jpg" /></p>
+<section id="allgemeine-voraussetzungen-fur-diese-ubung">
+<h2>Allgemeine Voraussetzungen für diese Übung<a class="headerlink" href="#allgemeine-voraussetzungen-fur-diese-ubung" title="Permalink to this headline">#</a></h2>
+<section id="aufbau-des-modells-mit-flopy">
+<h3>Aufbau des Modells mit FloPy<a class="headerlink" href="#aufbau-des-modells-mit-flopy" title="Permalink to this headline">#</a></h3>
+<p>Um das Jupyter Notebook auszuführen, wird vorausgesetzt:</p>
+<ul class="simple">
+<li><p>die ausführbare Datei von MODFLOW-NWT ist verfügbar</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">FloPy</span></code> ist verfügbar (<a class="reference external" href="https://github.com/modflowpy/flopy">https://github.com/modflowpy/flopy</a>)</p></li>
+</ul>
+<section id="einbinden-der-notwendigen-bibliotheken">
+<h4>Einbinden der notwendigen Bibliotheken<a class="headerlink" href="#einbinden-der-notwendigen-bibliotheken" title="Permalink to this headline">#</a></h4>
+<p>Zunächst werden die notwendigen Bibliotheken eingebunden. Falls Bibliotheken fehlen, müssen diese auf dem üblichen Weg (z. B. mittels Kommandozeile <code class="docutils literal notranslate"><span class="pre">CMD</span></code> und <code class="docutils literal notranslate"><span class="pre">PIP</span> <span class="pre">INSTALL</span> <span class="pre">-PaketXZ</span></code></p>
+</section>
+</section>
+</section>
+<section id="einbinden-aller-notewendigen-packete">
+<h2>Einbinden aller notewendigen Packete<a class="headerlink" href="#einbinden-aller-notewendigen-packete" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pickle</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">matplotlib.patches</span> <span class="k">as</span> <span class="nn">mpatches</span>
+<span class="kn">import</span> <span class="nn">matplotlib.colors</span> <span class="k">as</span> <span class="nn">clrs</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">flopy</span>
+<span class="kn">import</span> <span class="nn">flopy.discretization</span> <span class="k">as</span> <span class="nn">fgrid</span>
+<span class="kn">import</span> <span class="nn">flopy.plot</span> <span class="k">as</span> <span class="nn">fplot</span>
+<span class="kn">from</span> <span class="nn">flopy.utils.gridintersect</span> <span class="kn">import</span> <span class="n">GridIntersect</span>
+<span class="kn">import</span> <span class="nn">shapely</span>
+<span class="kn">from</span> <span class="nn">shapely.geometry</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">Polygon</span><span class="p">,</span>
+    <span class="n">LineString</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Markdown</span> <span class="k">as</span> <span class="n">md</span>
+
+<span class="kn">from</span> <span class="nn">MODELL_01</span> <span class="kn">import</span> <span class="n">MODELL_01_ini</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="nn">Input In [1],</span> in <span class="ni">&lt;cell line: 7&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">import</span> <span class="nn">matplotlib.patches</span> <span class="k">as</span> <span class="nn">mpatches</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="kn">import</span> <span class="nn">matplotlib.colors</span> <span class="k">as</span> <span class="nn">clrs</span>
+<span class="ne">----&gt; </span><span class="mi">7</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="kn">import</span> <span class="nn">flopy</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="kn">import</span> <span class="nn">flopy.discretization</span> <span class="k">as</span> <span class="nn">fgrid</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;pandas&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="allgemeine-definition-des-modells">
+<h2>Allgemeine Definition des Modells<a class="headerlink" href="#allgemeine-definition-des-modells" title="Permalink to this headline">#</a></h2>
+<p>Zunächst wird das Modell grundsätzlich definiert. Im nachfolgenden Skript sind die notwendigen Befehle ausführlich kommentiert.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">###########################</span>
+<span class="c1"># Namen und Verzeichnisse #</span>
+<span class="c1">###########################</span>
+
+<span class="c1"># Verzeichnis, in welchem die Modelldaten gespeichert werden</span>
+<span class="n">path</span> <span class="o">=</span> <span class="s1">&#39;MODELL_01&#39;</span>
+<span class="c1"># Name des Modells</span>
+<span class="n">modelname</span> <span class="o">=</span> <span class="s1">&#39;M01&#39;</span>
+<span class="c1"># Verwendete Version von MODFLOW</span>
+<span class="n">MODFLOW_version</span><span class="o">=</span><span class="s2">&quot;mfnwt&quot;</span> <span class="c1">#&#39;mfnwt&#39;</span>
+<span class="c1"># Bezeichnung der ausführbaren Datei. Muss ggf. angepasst werden und sollte global (über PATH) zugänglich sein</span>
+<span class="n">MODFLOW_exe_name</span><span class="o">=</span><span class="s2">&quot;/home/grabow/modflow_nwt/mfnwt&quot;</span> 
+
+
+<span class="c1">##############################################</span>
+<span class="c1"># Ausdehnung des Modells und Diskretisierung #</span>
+<span class="c1">##############################################</span>
+
+<span class="c1"># Ausdehnung in x-Achse, m</span>
+<span class="n">Lx</span> <span class="o">=</span> <span class="mf">4000.</span>
+<span class="c1"># Ausdehnung in y-Achse, m</span>
+<span class="n">Ly</span> <span class="o">=</span> <span class="mf">2500.</span>
+<span class="c1"># Oberkante des Modells, m</span>
+<span class="n">ztop</span> <span class="o">=</span> <span class="mf">265.</span>
+<span class="c1"># Unterkante des Modells, m</span>
+<span class="n">zbot</span> <span class="o">=</span> <span class="mf">250.</span>
+<span class="c1"># Anzahl der Schichten (Layer)</span>
+<span class="n">nlay</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="c1">#Anzahl der Zeilen (Rows)</span>
+<span class="n">nrow</span> <span class="o">=</span> <span class="mi">25</span>
+<span class="c1"># Anzahl der Spalten (Columns)</span>
+<span class="n">ncol</span> <span class="o">=</span> <span class="mi">40</span>
+<span class="c1"># Eckpunkte der rechteckigen Zone mit anderem K-Wert</span>
+<span class="c1"># Jeder Eckpunkt ist in einer Zeile gegeben mit (x, y), m</span>
+<span class="c1"># Start ist der Punkt unten links, dann weiter gegen den Uhrzeigersinn</span>
+<span class="n">rectangle_vertices</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">(</span><span class="mi">2500</span><span class="p">,</span> <span class="mi">1500</span><span class="p">),</span>
+        <span class="p">(</span><span class="n">Lx</span><span class="p">,</span> <span class="mi">1500</span><span class="p">),</span>
+        <span class="p">(</span><span class="n">Lx</span><span class="p">,</span> <span class="n">Ly</span><span class="p">),</span>
+        <span class="p">(</span><span class="mi">2500</span><span class="p">,</span> <span class="n">Ly</span><span class="p">)</span>
+    <span class="p">]</span>
+<span class="c1"># Eckpunkte des Flusses</span>
+<span class="c1"># Hier sind der Punkt links unten und rechts oben angegeben, m</span>
+<span class="n">river_vertices</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">2500</span><span class="p">,</span> <span class="mi">1500</span><span class="p">)</span>
+<span class="p">]</span>
+<span class="c1"># Position von W1, im Format (x,y)</span>
+<span class="n">w1_pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">3000</span><span class="p">,</span> <span class="mi">1600</span><span class="p">)</span>
+<span class="c1"># Position von W2, im Format (x,y)</span>
+<span class="n">w2_pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">3000</span><span class="p">,</span> <span class="mi">1400</span><span class="p">)</span>
+
+
+<span class="c1">#########################</span>
+<span class="c1"># Grundwasserneubildung #</span>
+<span class="c1">#########################</span>
+
+<span class="c1"># Grundwasserneubilugnsrate für linke Hälfte des Modellgebiets, mm/a</span>
+<span class="n">r_l</span> <span class="o">=</span> <span class="mf">150.</span>
+<span class="c1"># Grundwasserneubilugnsrate für rechte Hälfte des Modellgebiets, mm/a</span>
+<span class="n">r_r</span> <span class="o">=</span> <span class="mf">200.</span>
+
+
+<span class="c1">##################################</span>
+<span class="c1"># Hydrogeologische Eigenschaften #</span>
+<span class="c1">##################################</span>
+
+<span class="c1"># K-Wert des Modellgebiets außerhalb der Rechteck-Zone, m/s</span>
+<span class="n">K1</span> <span class="o">=</span> <span class="mf">0.005</span>
+<span class="c1"># K-Wert innerhalb der Rechteck-Zone, m/s</span>
+<span class="n">K2</span> <span class="o">=</span> <span class="mf">0.002</span>
+<span class="c1"># Vertikale Anisotropie</span>
+<span class="n">Vani</span> <span class="o">=</span> <span class="mf">1.</span>
+<span class="c1"># Typ der Schichten (laytyp =1 für &#39;convertible&#39;)</span>
+<span class="n">laytyp</span> <span class="o">=</span> <span class="mi">1</span>
+
+
+<span class="c1">#########</span>
+<span class="c1"># Fluss #</span>
+<span class="c1">#########</span>
+
+<span class="c1"># Mächtigkeit der Flusssohle (riverbed thickness), m</span>
+<span class="n">m_riv</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="c1"># Breite des Flusses (riverbed width), m</span>
+<span class="n">w_riv</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="c1"># hydraulische Leitfähigkeit des Flussbettes, m^2/s</span>
+<span class="n">Rcond</span> <span class="o">=</span> <span class="mi">150000</span>
+<span class="c1"># Layer der Flusssohle. Achtung: Oberster Layer = 0</span>
+<span class="n">riv_layer</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="c1"># Flusswasserstand links unten, m</span>
+<span class="n">riv_head_1</span> <span class="o">=</span> <span class="mi">260</span>
+<span class="c1"># Flusswasserstand rechter oberer Rand, m</span>
+<span class="n">riv_head_2</span> <span class="o">=</span> <span class="mi">258</span>
+
+
+<span class="c1">#################</span>
+<span class="c1"># Festpotential #</span>
+<span class="c1">#################</span>
+
+<span class="c1"># Festpotential links, m</span>
+<span class="n">h_l</span> <span class="o">=</span> <span class="mi">260</span>
+<span class="c1"># Festpotential rechts oben, m</span>
+<span class="n">h_r_o</span> <span class="o">=</span> <span class="mi">254</span>
+<span class="c1"># Festpotential rechts unten, m</span>
+<span class="n">h_r_u</span> <span class="o">=</span> <span class="mi">256</span>
+
+
+<span class="c1">###########</span>
+<span class="c1"># Brunnen #</span>
+<span class="c1">###########</span>
+
+<span class="c1"># Entnahmerate von W1, m^3/d</span>
+<span class="n">w1_q</span> <span class="o">=</span> <span class="o">-</span><span class="mi">2000</span>
+<span class="c1"># Entnahmerate von W2, m^3/d</span>
+<span class="n">w2_q</span> <span class="o">=</span> <span class="o">-</span><span class="mi">5000</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">######################</span>
+<span class="c1"># Abgeleitete Größen #</span>
+<span class="c1">######################</span>
+
+<span class="c1"># dx, m</span>
+<span class="n">delc</span> <span class="o">=</span> <span class="n">Lx</span> <span class="o">/</span> <span class="n">ncol</span>
+<span class="c1"># dy, m</span>
+<span class="n">delr</span> <span class="o">=</span> <span class="n">Ly</span> <span class="o">/</span> <span class="n">nrow</span>
+<span class="c1"># dz, m</span>
+<span class="n">delv</span> <span class="o">=</span> <span class="p">(</span><span class="n">ztop</span> <span class="o">-</span> <span class="n">zbot</span><span class="p">)</span> <span class="o">/</span> <span class="n">nlay</span>
+
+<span class="c1"># Zwischenschichten. Wenn es nur einen Layer gibt, enthält der array </span>
+<span class="c1"># nur Ober-und Unterkante</span>
+<span class="n">botm</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">ztop</span><span class="p">,</span> <span class="n">zbot</span><span class="p">,</span> <span class="n">nlay</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Grundwasserneubildungsraten von mm/a in m/s</span>
+<span class="n">r_l_si</span> <span class="o">=</span> <span class="n">r_l</span> <span class="o">/</span> <span class="p">(</span><span class="mf">365.25</span> <span class="o">*</span> <span class="mi">24</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">)</span>
+<span class="n">r_r_si</span> <span class="o">=</span> <span class="n">r_r</span> <span class="o">/</span> <span class="p">(</span><span class="mf">365.25</span> <span class="o">*</span> <span class="mi">24</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">)</span>
+<span class="c1"># Gesamtarray der Grundwasserneubildungsrate</span>
+<span class="n">recharge</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">nrow</span><span class="p">,</span> <span class="n">ncol</span><span class="p">))</span>
+<span class="n">recharge</span><span class="p">[:,:</span><span class="nb">round</span><span class="p">(</span><span class="n">ncol</span><span class="o">/</span><span class="mi">2</span><span class="p">)]</span> <span class="o">=</span> <span class="n">r_l_si</span>
+<span class="n">recharge</span><span class="p">[:,</span><span class="nb">round</span><span class="p">(</span><span class="n">ncol</span><span class="o">/</span><span class="mi">2</span><span class="p">):]</span> <span class="o">=</span> <span class="n">r_r_si</span>
+
+<span class="c1"># Um das erstellte Grid im Hintergrundbild plotten zu können,</span>
+<span class="c1"># müssen die Modellränder im Bild den Pixeln im Bild zugeordnet werden</span>
+<span class="n">pxl_l</span> <span class="o">=</span> <span class="mi">226</span>
+<span class="n">pxl_r</span> <span class="o">=</span> <span class="mi">1131</span>
+<span class="n">pxl_o</span> <span class="o">=</span> <span class="mi">134</span>
+<span class="n">pxl_u</span> <span class="o">=</span> <span class="mi">698</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="einstellungen-zum-plotten">
+<h3>Einstellungen zum Plotten<a class="headerlink" href="#einstellungen-zum-plotten" title="Permalink to this headline">#</a></h3>
+<p>An dieser Stelle  werden globale Einstellungen zum Erstellen von Grafiken getroffen (z.B. die Größe)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;figure.figsize&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><a id="intersect"></a></p>
+</section>
+<section id="strukturiertes-grid">
+<h3>Strukturiertes Grid<a class="headerlink" href="#strukturiertes-grid" title="Permalink to this headline">#</a></h3>
+<p>Shape-Objekte wie der Fluss, die Rechteck-Zone oder die Brunnen haben nur Bezug zu den Koordinaten im Modell (x, y). Um diesen Koordinaten später Spalten und Zeilen zuzuordnen, wird zuerst ein strukturiertes Grid erzeugt. Hieraus wird ein Intersect-Objekt erstellt, mit dem dann die Shape-Objekte verschnitten werden können.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Strukturiertes Grid</span>
+<span class="n">sgr</span> <span class="o">=</span> <span class="n">fgrid</span><span class="o">.</span><span class="n">StructuredGrid</span><span class="p">(</span><span class="n">delr</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">delr</span><span class="p">]</span> <span class="o">*</span> <span class="n">nrow</span><span class="p">),</span> <span class="n">delc</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">delc</span><span class="p">]</span> <span class="o">*</span> <span class="n">ncol</span><span class="p">))</span>
+<span class="c1"># Intersect-Objekt zur späteren Verschneidung</span>
+<span class="n">ix</span> <span class="o">=</span> <span class="n">GridIntersect</span><span class="p">(</span><span class="n">sgr</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;vertex&quot;</span><span class="p">,</span> <span class="n">rtree</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/grabow/anaconda3/envs/flopy/lib/python3.10/site-packages/flopy/utils/gridintersect.py:276: ShapelyDeprecationWarning: Setting custom attributes on geometry objects is deprecated, and will raise an AttributeError in Shapely 2.0
+  p.name = (i, j)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="erzeugen-des-modflow-modells-und-der-jeweiligen-modflow-package-objekte">
+<h2>Erzeugen des MODFLOW-Modells und der jeweiligen (MODFLOW)Package-Objekte<a class="headerlink" href="#erzeugen-des-modflow-modells-und-der-jeweiligen-modflow-package-objekte" title="Permalink to this headline">#</a></h2>
+<section id="modflow-package">
+<h3>MODFLOW-Package<a class="headerlink" href="#modflow-package" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">m</span> <span class="o">=</span> <span class="n">flopy</span><span class="o">.</span><span class="n">modflow</span><span class="o">.</span><span class="n">Modflow</span><span class="p">(</span><span class="n">modelname</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="n">MODFLOW_version</span><span class="p">,</span> 
+                          <span class="n">exe_name</span><span class="o">=</span><span class="n">MODFLOW_exe_name</span><span class="p">,</span> <span class="n">model_ws</span><span class="o">=</span><span class="n">path</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="dis-package">
+<h3>DIS-Package<a class="headerlink" href="#dis-package" title="Permalink to this headline">#</a></h3>
+<p>Ein Discretization-Objekt wird erzeugt. Es enthält alle wichtigen Informationen zur Diskretisierung des Modells:</p>
+<ul class="simple">
+<li><p>Anzahl der Layer, Zeilen und Spalten</p></li>
+<li><p>Breite der Zeilen und Spalten (hier in Meter)</p></li>
+<li><p>Lage der Layerschichten (hier in Meter)</p></li>
+</ul>
+<p>Mehr Informationen zum Discretization-Package in Modflow-2005 findest Du <a class="reference external" href="https://water.usgs.gov/nrp/gwsoftware/modflow2000/MFDOC/dis.html">hier</a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dis</span> <span class="o">=</span> <span class="n">flopy</span><span class="o">.</span><span class="n">modflow</span><span class="o">.</span><span class="n">ModflowDis</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">nlay</span><span class="p">,</span> <span class="n">nrow</span><span class="p">,</span> <span class="n">ncol</span><span class="p">,</span> <span class="n">delr</span><span class="o">=</span><span class="n">delr</span><span class="p">,</span> <span class="n">delc</span><span class="o">=</span><span class="n">delc</span><span class="p">,</span>
+                               <span class="n">top</span><span class="o">=</span><span class="n">ztop</span><span class="p">,</span> <span class="n">botm</span><span class="o">=</span><span class="n">botm</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Das resultierende Grid mit Zeilen und Spalten sieht in der Draufsicht so aus:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># CELL TO HIDE</span>
+
+<span class="c1"># Einladen der Draufsicht</span>
+<span class="n">img</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s2">&quot;images/MAP_well.jpg&quot;</span><span class="p">)</span>
+
+<span class="c1"># Erstellen der Figure und der Axes</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">20</span><span class="p">))</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
+
+<span class="c1"># Bild in die Axes einfügen</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+<span class="c1"># Grid in die Box einfügen</span>
+<span class="n">ax_child</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">inset_axes</span><span class="p">([</span><span class="n">pxl_l</span><span class="p">,</span> <span class="n">pxl_o</span><span class="p">,</span> <span class="n">pxl_r</span><span class="o">-</span><span class="n">pxl_l</span><span class="p">,</span><span class="n">pxl_u</span><span class="o">-</span><span class="n">pxl_o</span><span class="p">],</span> <span class="n">transform</span><span class="o">=</span><span class="n">ax</span><span class="o">.</span><span class="n">transData</span><span class="p">)</span>
+<span class="n">ax_child</span><span class="o">.</span><span class="n">patch</span><span class="o">.</span><span class="n">set_alpha</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>
+<span class="n">sgr</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax_child</span><span class="p">)</span>
+
+<span class="c1"># Ausschalten aller automatischen Axenbeschriftungen</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s2">&quot;off&quot;</span><span class="p">)</span>
+<span class="n">ax_child</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s2">&quot;off&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.0, 2500.0, 0.0, 4000.0)
+</pre></div>
+</div>
+<img alt="../_images/01_MODELL_INITIIEREN_AWH2015_p432_16_1.png" src="../_images/01_MODELL_INITIIEREN_AWH2015_p432_16_1.png" />
+</div>
+</div>
+</section>
+<section id="bas-package">
+<h3>BAS-Package<a class="headerlink" href="#bas-package" title="Permalink to this headline">#</a></h3>
+<p>Ein Basic-Objekt wird erzeugt. Es enthält weitere Informationen zu den Zellen:</p>
+<ul class="simple">
+<li><p>Ob eine Zelle entweder aktiv oder inaktiv ist oder ein definiertes Druckpotential besitzt</p></li>
+<li><p>Das Druckpotential der Zelle. Für aktive Zellen ist dies das Anfangspotential zu Beginn der Simulation. Sind die Zellen inaktiv oder haben ein definiertes Druckpotential wird das hier angegebene Potential über die gesamte Simulation verwendet</p></li>
+</ul>
+<p>Mehr Informationen zum Basic-Package in Modflow-2005 findest Du <a class="reference external" href="https://water.usgs.gov/nrp/gwsoftware/modflow2000/MFDOC/bas6.html">hier</a>.</p>
+<p><a id="bas"></a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Festpotential entlang des linken Modellrands als array</span>
+<span class="n">head_left</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">nrow</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span> <span class="o">*</span> <span class="n">h_l</span>
+<span class="c1"># Festpotential entlang des rechten Modellrands als array (lineare Interpolation)</span>
+<span class="n">head_right</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">h_r_u</span><span class="p">,</span> <span class="n">h_r_o</span><span class="p">,</span> <span class="n">nrow</span><span class="p">)</span>
+
+<span class="c1"># ibound array zur Defintion aktiver oder inaktiver Zellen oder Zellen mit definiertem Druckpotential</span>
+<span class="c1"># Jeder Zelle (layer, x, y) wird ein Wert zugeordnet. Die möglichen Werte sind:</span>
+<span class="c1"># ibound(layer, x, y) &lt; 0: Zelle mit definiertem Druckpotential</span>
+<span class="c1"># ibound(layer, x, y) = 0: Zelle inaktiv</span>
+<span class="c1"># ibound(layer, x, y) &gt; 0: Zelle aktiv</span>
+<span class="n">ibound</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="n">nlay</span><span class="p">,</span> <span class="n">nrow</span><span class="p">,</span> <span class="n">ncol</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span> 
+<span class="n">ibound</span><span class="p">[:,</span> <span class="p">:,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+<span class="n">ibound</span><span class="p">[:,</span> <span class="p">:,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+
+<span class="c1"># Anfangspotential und Festpotential</span>
+<span class="n">strt</span> <span class="o">=</span> <span class="n">ztop</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="n">nlay</span><span class="p">,</span> <span class="n">nrow</span><span class="p">,</span> <span class="n">ncol</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
+<span class="n">strt</span><span class="p">[:,</span> <span class="p">:,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">head_left</span>
+<span class="n">strt</span><span class="p">[:,</span> <span class="p">:,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">head_right</span>
+<span class="n">bas</span> <span class="o">=</span> <span class="n">flopy</span><span class="o">.</span><span class="n">modflow</span><span class="o">.</span><span class="n">ModflowBas</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">ibound</span><span class="o">=</span><span class="n">ibound</span><span class="p">,</span> <span class="n">strt</span><span class="o">=</span><span class="n">strt</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="oc-package">
+<h3>OC-Package<a class="headerlink" href="#oc-package" title="Permalink to this headline">#</a></h3>
+<p>Ein Output-Control-Objekt wird erzeugt. Hierdruch ist definiert, welche Ausgabe das Modell zu welchem Zeitschritt und welcher Stressperiode erstellen soll. Die möglichen Ausgaben sind:</p>
+<ul class="simple">
+<li><p>Druckpotential</p></li>
+<li><p>Absenkung</p></li>
+<li><p>Volumen-Budget</p></li>
+<li><p>iBound-Array (<a class="reference external" href="#bas">hier definiert</a>)</p></li>
+</ul>
+<p>Für einige Ausgaben kann zusätzlich das Format (Binary oder Fortran-Formate) und die Art der Ausgabe (durch Print oder Speichern) festgelegt werden.</p>
+<p>Mehr Informationen zum OC-Package in Modflow-2005 findest Du <a class="reference external" href="https://water.usgs.gov/nrp/gwsoftware/modflow2000/MFDOC/oc.html">hier</a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Zum Zeitschritt 0 und Stressperiode 0 (Standard bei Steady-State)</span>
+<span class="c1"># soll das Druckpotential und des Volumen-Budget gespeichert und ausgegeben werden</span>
+<span class="n">words</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;print head&quot;</span><span class="p">,</span> <span class="s2">&quot;print budget&quot;</span><span class="p">,</span> <span class="s2">&quot;save head&quot;</span><span class="p">,</span> <span class="s2">&quot;save budget&quot;</span><span class="p">]</span>
+<span class="n">oc</span> <span class="o">=</span> <span class="n">flopy</span><span class="o">.</span><span class="n">modflow</span><span class="o">.</span><span class="n">ModflowOc</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">stress_period_data</span><span class="o">=</span><span class="p">{(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">):</span> <span class="n">words</span><span class="p">},</span> <span class="n">compact</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="nwt-package">
+<h3>NWT-Package<a class="headerlink" href="#nwt-package" title="Permalink to this headline">#</a></h3>
+<p>Ein NWT-Objekt wird erzeugt. Bei NWT handelt sich um ein eigenständiges Lösungsverfahren, das vor allem das dauerhafte Trockenfallen von Zellen im ungespannten Grundwasserfluss verhindert. Dieses soll hier verwendet werden.</p>
+<p>Mehr Informationen zu Modflow-NWT findest Du <a class="reference external" href="https://www.usgs.gov/software/modflow-nwt-newton-formulation-modflow-2005">hier</a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nwt</span> <span class="o">=</span> <span class="n">flopy</span><span class="o">.</span><span class="n">modflow</span><span class="o">.</span><span class="n">ModflowNwt</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="rch-package">
+<h3>RCH-Package<a class="headerlink" href="#rch-package" title="Permalink to this headline">#</a></h3>
+<p>Ein Recharge-Objekt wird erzeugt. Es enthält alle Informationen über die Grundwasserneubildung im Modell (wo und wie viel).</p>
+<p>Mehr Informationen zum Recharge-Package findest Du <a class="reference external" href="https://water.usgs.gov/nrp/gwsoftware/modflow2000/MFDOC/rch.html">hier</a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rch</span> <span class="o">=</span> <span class="n">flopy</span><span class="o">.</span><span class="n">modflow</span><span class="o">.</span><span class="n">mfrch</span><span class="o">.</span><span class="n">ModflowRch</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">nrchop</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">rech</span><span class="o">=</span><span class="n">recharge</span><span class="p">,</span> <span class="n">extension</span><span class="o">=</span><span class="s1">&#39;rch&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="upw-package">
+<h3>UPW-Package<a class="headerlink" href="#upw-package" title="Permalink to this headline">#</a></h3>
+<p>Ein Upstream-weighting-Objekt wird erzeugt. Das <strong>UP</strong>stream <strong>W</strong>eightning Package beschreibt den Fluss zwischen zwei Zellen für Modflow-NWT.</p>
+<p>Mehr Informationen zu UPW findest Du <a class="reference external" href="https://water.usgs.gov/nrp/gwsoftware/modflow2000/MFDOC/upw_upstream_weighting_package.html">hier</a>.</p>
+<p>Das UPW Package benötigt die hydraulische Leitfähigkeit für jede Zelle im Modell. Hierfür wird ein Array mit Größe des Modellgrids (nrow x ncol) erstellt, in dem jeder Zelle erst einmal K1 zugewiesen wird. Dann wird das Rechteck Shape-Objekt mit dem <a class="reference external" href="#intersect">zuvor erstellelten Intersect-Objekt</a> verschnitten, um so die Zeilen und Spalten zu erhalten, in denen K2 gilt. An diesen Stellen wird K1 im Array dann mit K2 ersetzt.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Rechteck als Polygon-Objekt</span>
+<span class="n">rectangle_shape</span> <span class="o">=</span> <span class="n">Polygon</span><span class="p">(</span><span class="n">rectangle_vertices</span><span class="p">)</span>
+<span class="c1"># Verschneiden des Polygon-Objektes mit dem Intersect-Objekt</span>
+<span class="n">rectangle_rcarray</span> <span class="o">=</span> <span class="n">ix</span><span class="o">.</span><span class="n">intersect</span><span class="p">(</span><span class="n">rectangle_shape</span><span class="p">)</span>
+
+<span class="c1"># Zuweisung von K1 und K2 zu den Spalten und Zeilen</span>
+<span class="n">k_zones</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="n">nlay</span><span class="p">,</span> <span class="n">nrow</span><span class="p">,</span> <span class="n">ncol</span><span class="p">))</span> <span class="o">*</span> <span class="n">K1</span>
+<span class="k">for</span> <span class="n">x_idx</span><span class="p">,</span> <span class="n">y_idx</span> <span class="ow">in</span> <span class="n">rectangle_rcarray</span><span class="o">.</span><span class="n">cellids</span><span class="p">:</span>
+    <span class="n">k_zones</span><span class="p">[:,</span><span class="n">x_idx</span><span class="p">,</span> <span class="n">y_idx</span><span class="p">]</span> <span class="o">=</span> <span class="n">K2</span>
+
+<span class="c1"># Erzeugen der UPW Daten</span>
+<span class="n">upw</span> <span class="o">=</span> <span class="n">flopy</span><span class="o">.</span><span class="n">modflow</span><span class="o">.</span><span class="n">ModflowUpw</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">hk</span><span class="o">=</span><span class="n">k_zones</span><span class="p">,</span> <span class="n">vka</span><span class="o">=</span><span class="n">Vani</span><span class="p">,</span> <span class="n">laytyp</span><span class="o">=</span><span class="n">laytyp</span><span class="p">)</span>
+
+<span class="c1"># Bildschirmausgabe der K-Werte sowie der Diskretisierung</span>
+<span class="n">upw</span><span class="o">.</span><span class="n">hk</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">grid</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Speichern der Matrix für die spätere Kalibrierung mit PEST (Schauen Sie sich die Datei im Modellverzeichnis an)</span>
+<span class="c1">#np.savetxt(os.path.join(path,&#39;K_ZONEN.dat&#39;), Kzones, delimiter=&#39; &#39;, fmt=&#39;%i&#39;)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:title={&#39;center&#39;:&#39;hk layer 1&#39;}&gt;
+</pre></div>
+</div>
+<img alt="../_images/01_MODELL_INITIIEREN_AWH2015_p432_26_1.png" src="../_images/01_MODELL_INITIIEREN_AWH2015_p432_26_1.png" />
+</div>
+</div>
+</section>
+<section id="riv-package">
+<h3>RIV-Package<a class="headerlink" href="#riv-package" title="Permalink to this headline">#</a></h3>
+<p>Das RIV-Package wird benutzt, um Randbedingungen 3. Art zu simulieren. In diesem Modell soll der Fluss so beschrieben werden. Um ein River-Objekt zu erzeugen, wird eine Tabelle benötigt, die alle Informationen zur Lage und Art der Randbedingung enthält.</p>
+<section id="theoretischer-aufbau-der-tabelle">
+<h4>Theoretischer Aufbau der Tabelle<a class="headerlink" href="#theoretischer-aufbau-der-tabelle" title="Permalink to this headline">#</a></h4>
+<p>In der Tabelle werden alle Zellen aufgeführt, die dem Fluss zugeordnet sind. Jede Zeile der Tabelle beschreibt dabei eine Zelle. Diese ist definiert durch ihren Layer und ihre Spalten - und Zeilennummer. Zu jeder Zelle sind folgende hydraulischen Größen angegeben:</p>
+<ul class="simple">
+<li><p>Flusswasserstand</p></li>
+<li><p>Hydraulische Leitfähigkeit des Flussbettes</p></li>
+<li><p>Höhe des Flussbettes</p></li>
+</ul>
+<p>Als Beispiel:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># CELL TO HIDE</span>
+<span class="n">string</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot; Layer | Zeile | Spalte | Flusswasserstand | Hydr. LF des Flussbetts | Höhe des Flussbetts</span>
+<span class="s2">------ | ------ | ------ | ------ | ------ | ------ </span>
+<span class="s2">0 | 0 | 0 | </span><span class="si">{</span><span class="n">riv_head_1</span><span class="si">}</span><span class="s2"> | </span><span class="si">{</span><span class="n">Rcond</span><span class="si">}</span><span class="s2"> |  </span><span class="si">{</span><span class="n">riv_head_1</span> <span class="o">-</span> <span class="mi">5</span><span class="si">}</span><span class="s2"> </span>
+<span class="s2">... | ... | ... | ... | ... |  ... &quot;&quot;&quot;</span>
+
+<span class="n">md</span><span class="p">(</span><span class="n">string</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>Layer | Zeile | Spalte | Flusswasserstand | Hydr. LF des Flussbetts | Höhe des Flussbetts
+------ | ------ | ------ | ------ | ------ | ------
+0 | 0 | 0 | 260 | 150000 |  255
+... | ... | ... | ... | ... |  ...</p>
+</div>
+</div>
+</section>
+<section id="erstellen-der-tabelle">
+<h4>Erstellen der Tabelle<a class="headerlink" href="#erstellen-der-tabelle" title="Permalink to this headline">#</a></h4>
+<p>Um die Zellen zu ermitteln, die zum Fluss dazugehören, muss - wie zuvor beim Rechteck Shape-Objekt - das Fluss Shape-Objekt mit dem Intersect-Objekt verschnitten werden.
+Das Fluss Shape-Objekt ist dabei eine Linie. Wie in der Abbildung dargestellt, werden alle Zellen, die von der Linie geschnitten werden, dem Fluss zugeordnet.
+<a id="river"></a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Fluss als Linien-Objekt</span>
+<span class="n">river_shape</span> <span class="o">=</span> <span class="n">LineString</span><span class="p">(</span><span class="n">river_vertices</span><span class="p">)</span>
+<span class="c1"># Verschneiden des Linien-Objektes mit dem Intersect-Objekt </span>
+<span class="n">river_rcarray</span> <span class="o">=</span> <span class="n">ix</span><span class="o">.</span><span class="n">intersect</span><span class="p">(</span><span class="n">river_shape</span><span class="p">)</span>
+
+<span class="c1"># Plotten der Verschneidung zur Veranschaulichung</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">sgr</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+<span class="n">riv</span> <span class="o">=</span> <span class="n">ix</span><span class="o">.</span><span class="n">plot_linestring</span><span class="p">(</span><span class="n">river_rcarray</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Fluss&quot;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">irow</span><span class="p">,</span> <span class="n">icol</span> <span class="ow">in</span> <span class="n">river_rcarray</span><span class="o">.</span><span class="n">cellids</span><span class="p">:</span>
+    <span class="p">(</span><span class="n">h2</span><span class="p">,)</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+        <span class="n">sgr</span><span class="o">.</span><span class="n">xcellcenters</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">icol</span><span class="p">],</span>
+        <span class="n">sgr</span><span class="o">.</span><span class="n">ycellcenters</span><span class="p">[</span><span class="n">irow</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+        <span class="s2">&quot;kx&quot;</span><span class="p">,</span>
+        <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Zellen, die dem Fluss zugeordnet werden&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">([</span><span class="n">h2</span><span class="p">,</span> <span class="n">riv</span><span class="o">.</span><span class="n">get_lines</span><span class="p">()[</span><span class="mi">0</span><span class="p">]],</span> <span class="p">[</span><span class="n">i</span><span class="o">.</span><span class="n">get_label</span><span class="p">()</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="n">h2</span><span class="p">,</span> <span class="n">riv</span><span class="o">.</span><span class="n">get_lines</span><span class="p">()[</span><span class="mi">0</span><span class="p">]]],</span> <span class="n">loc</span><span class="o">=</span><span class="s2">&quot;best&quot;</span><span class="p">,</span> <span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/01_MODELL_INITIIEREN_AWH2015_p432_30_0.png" src="../_images/01_MODELL_INITIIEREN_AWH2015_p432_30_0.png" />
+</div>
+</div>
+<p>Jetzt sind die Zeilen und Spalten bekannt. Hieraus wird die Tablle erstellt, die jetzt nach und nach erweitert wird.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Erstellen der Tabelle aus den Zeilen und Spalten</span>
+<span class="n">river_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">river_rcarray</span><span class="o">.</span><span class="n">cellids</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;row&quot;</span><span class="p">,</span> <span class="s2">&quot;column&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Jetzt wird die Layer-Spalte hinzugefügt</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Hinzufügen der Layer-Spalte zur Tabelle</span>
+<span class="n">layer</span> <span class="o">=</span> <span class="n">riv_layer</span>
+<span class="n">river_df</span><span class="p">[</span><span class="s2">&quot;layer&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">layer</span><span class="p">]</span> <span class="o">*</span> <span class="n">river_df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Als nächstes wird der Flusswasserstand für jede Zelle ermittelt. Der Flusswasserstand ist links unten im Modell und rechts oben definiert. Damit kann er linear entlang der Fluss-Linie interpoliert werden. Der Mittelpunkt einer Zelle liegt allerdings nie direkt auf der Flusslinie (<a class="reference external" href="#river">siehe Abbildung</a>). Als Kompromiss wird einer Zelle der Flusswasserstand von dem Punkt entlang der Flusslinie zugeordnet, der am nächsten am Mittelpunkt der Zelle ist. Am Ende der Berechnung werden die Flusswasserstände als Spalte an die Tabelle beigefügt.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Bestimmen des des Wasserstands für jede Zelle, basierend auf der kuerzesten Entfernung zwischen </span>
+<span class="c1"># Zellmittelpunkt und dem tatsächlichen Verlauf des Flusses</span>
+
+<span class="k">def</span> <span class="nf">get_x_intersect</span><span class="p">(</span><span class="n">slope</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">x_cell</span><span class="p">,</span> <span class="n">y_cell</span><span class="p">):</span>
+    <span class="n">x_ict</span> <span class="o">=</span> <span class="p">(</span><span class="n">y_cell</span> <span class="o">+</span> <span class="n">x_cell</span> <span class="o">/</span> <span class="n">slope</span> <span class="o">-</span> <span class="n">n</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">slope</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">slope</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">x_ict</span>
+<span class="k">def</span> <span class="nf">get_y_intersect</span><span class="p">(</span><span class="n">slope</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">x_itc</span><span class="p">):</span>
+    <span class="n">y_itc</span> <span class="o">=</span> <span class="n">slope</span> <span class="o">*</span> <span class="n">x_itc</span> <span class="o">+</span> <span class="n">n</span>
+    <span class="k">return</span> <span class="n">y_itc</span>
+<span class="k">def</span> <span class="nf">get_length_intersect</span><span class="p">(</span><span class="n">x_itc</span><span class="p">,</span> <span class="n">y_itc</span><span class="p">):</span>
+    <span class="n">length_itc</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">x_itc</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">y_itc</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">length_itc</span>
+<span class="k">def</span> <span class="nf">get_val_intersect</span><span class="p">(</span><span class="n">length_end</span><span class="p">,</span> <span class="n">length_itc</span><span class="p">,</span> <span class="n">val_start</span><span class="p">,</span> <span class="n">val_end</span><span class="p">):</span>
+    <span class="n">val_itc</span> <span class="o">=</span> <span class="p">(</span><span class="n">val_end</span> <span class="o">-</span> <span class="n">val_start</span><span class="p">)</span> <span class="o">*</span> <span class="n">length_itc</span> <span class="o">/</span> <span class="p">(</span><span class="n">length_end</span><span class="p">)</span> <span class="o">+</span> <span class="n">val_start</span>
+    <span class="k">return</span> <span class="n">val_itc</span>
+
+<span class="n">river_stage</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([])</span>
+<span class="n">length_end</span> <span class="o">=</span> <span class="n">river_shape</span><span class="o">.</span><span class="n">length</span>
+<span class="n">slope</span> <span class="o">=</span> <span class="p">(</span><span class="n">river_shape</span><span class="o">.</span><span class="n">xy</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">river_shape</span><span class="o">.</span><span class="n">xy</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span> <span class="o">/</span> <span class="p">(</span><span class="n">river_shape</span><span class="o">.</span><span class="n">xy</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">river_shape</span><span class="o">.</span><span class="n">xy</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">n</span> <span class="o">=</span> <span class="n">river_shape</span><span class="o">.</span><span class="n">xy</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">slope</span> <span class="o">*</span> <span class="n">river_shape</span><span class="o">.</span><span class="n">xy</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">irow</span><span class="p">,</span> <span class="n">icol</span> <span class="ow">in</span> <span class="n">river_rcarray</span><span class="o">.</span><span class="n">cellids</span><span class="p">:</span>
+        <span class="n">x_cell</span><span class="p">,</span> <span class="o">=</span> <span class="n">sgr</span><span class="o">.</span><span class="n">xcellcenters</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">icol</span><span class="p">],</span>
+        <span class="n">y_cell</span><span class="p">,</span> <span class="o">=</span> <span class="n">sgr</span><span class="o">.</span><span class="n">ycellcenters</span><span class="p">[</span><span class="n">irow</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+        <span class="n">x_itc</span> <span class="o">=</span> <span class="n">get_x_intersect</span><span class="p">(</span><span class="n">slope</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">x_cell</span><span class="p">,</span> <span class="n">y_cell</span><span class="p">)</span>
+        <span class="n">y_itc</span> <span class="o">=</span> <span class="n">get_y_intersect</span><span class="p">(</span><span class="n">slope</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">x_itc</span><span class="p">)</span>
+        <span class="n">length_itc</span> <span class="o">=</span> <span class="n">get_length_intersect</span><span class="p">(</span><span class="n">x_itc</span><span class="p">,</span> <span class="n">y_itc</span><span class="p">)</span>
+        <span class="n">val_itc</span> <span class="o">=</span> <span class="n">get_val_intersect</span><span class="p">(</span><span class="n">length_end</span><span class="p">,</span> <span class="n">length_itc</span><span class="p">,</span> <span class="n">riv_head_1</span><span class="p">,</span> <span class="n">riv_head_2</span><span class="p">)</span>
+        <span class="n">river_stage</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">river_stage</span><span class="p">,</span> <span class="n">val_itc</span><span class="p">)</span>
+
+<span class="n">river_df</span><span class="p">[</span><span class="s2">&quot;stage&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">river_stage</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Die Höhe des Flussbettes ergibt sich durch den berechneten Flusswasserstand minus der Flusstiefe. Diese ist in der Aufgabe als kostant 5m angenommen. Das Ergebnis wird als Spalte der Tabelle beigefügt.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Hinzufügen der Flussbett-Spalte zur Tabelle</span>
+<span class="n">river_df</span><span class="p">[</span><span class="s2">&quot;rbot&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">river_stage</span> <span class="o">-</span> <span class="mi">5</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Die hydraulische Leitfähigkeit des Flussbettes ist in der Aufgabe definiert und ist für alle Zellen gleich. Das Ergebnis wird als Spalte der Tabelle beigefügt.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Hinzufügen der Leitfähigkeits-Spalte zur Tabelle</span>
+<span class="n">river_df</span><span class="p">[</span><span class="s2">&quot;Rcond&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">Rcond</span><span class="p">]</span> <span class="o">*</span> <span class="n">river_df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Jetzt ist die Tabelle komplett:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Umsortieren der Spalten in die richtige Reihenfolge</span>
+<span class="n">river_df</span> <span class="o">=</span> <span class="n">river_df</span><span class="p">[[</span><span class="s2">&quot;layer&quot;</span><span class="p">,</span><span class="s2">&quot;row&quot;</span><span class="p">,</span><span class="s2">&quot;column&quot;</span><span class="p">,</span><span class="s2">&quot;stage&quot;</span><span class="p">,</span><span class="s2">&quot;Rcond&quot;</span><span class="p">,</span><span class="s2">&quot;rbot&quot;</span><span class="p">]]</span>
+
+<span class="c1"># Ausgeben der Tabelle</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">river_df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>    layer  row  column       stage   Rcond        rbot
+0       0   25      23  258.105882  150000  253.105882
+1       0   25      24  258.047059  150000  253.047059
+2       0   26      21  258.258824  150000  253.258824
+3       0   26      22  258.200000  150000  253.200000
+4       0   26      23  258.141176  150000  253.141176
+5       0   27      20  258.352941  150000  253.352941
+6       0   27      21  258.294118  150000  253.294118
+7       0   28      18  258.505882  150000  253.505882
+8       0   28      19  258.447059  150000  253.447059
+9       0   29      16  258.658824  150000  253.658824
+10      0   29      17  258.600000  150000  253.600000
+11      0   29      18  258.541176  150000  253.541176
+12      0   30      15  258.752941  150000  253.752941
+13      0   30      16  258.694118  150000  253.694118
+14      0   31      13  258.905882  150000  253.905882
+15      0   31      14  258.847059  150000  253.847059
+16      0   32      11  259.058824  150000  254.058824
+17      0   32      12  259.000000  150000  254.000000
+18      0   32      13  258.941176  150000  253.941176
+19      0   33      10  259.152941  150000  254.152941
+20      0   33      11  259.094118  150000  254.094118
+21      0   34       8  259.305882  150000  254.305882
+22      0   34       9  259.247059  150000  254.247059
+23      0   35       6  259.458824  150000  254.458824
+24      0   35       7  259.400000  150000  254.400000
+25      0   35       8  259.341176  150000  254.341176
+26      0   36       5  259.552941  150000  254.552941
+27      0   36       6  259.494118  150000  254.494118
+28      0   37       3  259.705882  150000  254.705882
+29      0   37       4  259.647059  150000  254.647059
+30      0   38       1  259.858824  150000  254.858824
+31      0   38       2  259.800000  150000  254.800000
+32      0   38       3  259.741176  150000  254.741176
+33      0   39       0  259.952941  150000  254.952941
+34      0   39       1  259.894118  150000  254.894118
+</pre></div>
+</div>
+</div>
+</div>
+<p>Mit der fertigen Tabelle kann das River-Objekt nun erstellt werden</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Kovertieren des pandas DataFrames in ein numpy array</span>
+<span class="n">rivdata</span> <span class="o">=</span> <span class="n">river_df</span><span class="o">.</span><span class="n">values</span>
+
+<span class="c1"># Zuordnen der konvertierten Tabelle zur Stressperiode</span>
+<span class="n">rivdata</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="n">rivdata</span><span class="p">}</span>
+
+<span class="c1"># Erzeugen des RIV Objektes</span>
+<span class="n">riv</span> <span class="o">=</span> <span class="n">flopy</span><span class="o">.</span><span class="n">modflow</span><span class="o">.</span><span class="n">mfriv</span><span class="o">.</span><span class="n">ModflowRiv</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">ipakcb</span><span class="o">=</span><span class="mi">53</span><span class="p">,</span> <span class="n">stress_period_data</span><span class="o">=</span><span class="n">rivdata</span><span class="p">,</span> 
+                                     <span class="n">extension</span><span class="o">=</span><span class="s1">&#39;riv&#39;</span><span class="p">,</span> <span class="n">unitnumber</span><span class="o">=</span><span class="mi">18</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">naux</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="wel-package">
+<h3>WEL-Package<a class="headerlink" href="#wel-package" title="Permalink to this headline">#</a></h3>
+<p>Das WEL-Package wird benutzt, um Randbedingungen 2. Art zu simulieren. In diesem Modell sollen die beiden Brunnen W1 und W2 so beschrieben werden. Die Brunnen sind in (x,y)-Koordinaten angegeben. Das heißt, es muss wieder mit dem Intersect-Objekt gearbeitet werden, um zu den Spalten-und Zeilennummer zu gelangen.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Verschneiden der Brunnen-Objekte mit dem Intersect-Objekt</span>
+<span class="n">w1_x_idx</span><span class="p">,</span> <span class="n">w1_y_idx</span> <span class="o">=</span> <span class="n">sgr</span><span class="o">.</span><span class="n">intersect</span><span class="p">(</span><span class="n">w1_pos</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">w1_pos</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">w2_x_idx</span><span class="p">,</span> <span class="n">w2_y_idx</span> <span class="o">=</span> <span class="n">sgr</span><span class="o">.</span><span class="n">intersect</span><span class="p">(</span><span class="n">w2_pos</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">w2_pos</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+
+<span class="c1"># Umrechnen der Förderraten von m^3/d in m^3/s</span>
+<span class="n">w1_q_si</span> <span class="o">=</span> <span class="n">w1_q</span> <span class="o">/</span> <span class="p">(</span><span class="mi">24</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span><span class="p">)</span>
+<span class="n">w2_q_si</span> <span class="o">=</span> <span class="n">w2_q</span> <span class="o">/</span> <span class="p">(</span><span class="mi">24</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span><span class="p">)</span>
+
+<span class="c1"># Erzeugen der Daten für Brunnen (Layer, Row, Column, Förderraten) für die Stressperioden</span>
+<span class="n">bflux</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="mi">0</span><span class="p">:[[</span><span class="mi">0</span><span class="p">,</span> <span class="n">w1_y_idx</span><span class="p">,</span> <span class="n">w1_x_idx</span><span class="p">,</span> <span class="n">w1_q_si</span><span class="p">],</span>
+      <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">w2_y_idx</span><span class="p">,</span> <span class="n">w2_x_idx</span><span class="p">,</span> <span class="n">w2_q_si</span><span class="p">]]</span>
+<span class="p">}</span>
+
+<span class="c1"># Erzeugen des WEL-Objektes</span>
+<span class="n">wel</span> <span class="o">=</span> <span class="n">flopy</span><span class="o">.</span><span class="n">modflow</span><span class="o">.</span><span class="n">ModflowWel</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">stress_period_data</span><span class="o">=</span><span class="n">bflux</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>structuredgrid.py:777: UserWarning: The interface &#39;intersect(self, x, y, local=False, forgive=False)&#39; has been deprecated. Use the intersect(self, x, y, z=None, local=False, forgive=False) interface instead.
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">Exception</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="nn">Input In [23],</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Verschneiden der Brunnen-Objekte mit dem Intersect-Objekt</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">w1_x_idx</span><span class="p">,</span> <span class="n">w1_y_idx</span> <span class="o">=</span> <span class="n">sgr</span><span class="o">.</span><span class="n">intersect</span><span class="p">(</span><span class="n">w1_pos</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">w1_pos</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">w2_x_idx</span><span class="p">,</span> <span class="n">w2_y_idx</span> <span class="o">=</span> <span class="n">sgr</span><span class="o">.</span><span class="n">intersect</span><span class="p">(</span><span class="n">w2_pos</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">w2_pos</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="c1"># Umrechnen der Förderraten von m^3/d in m^3/s</span>
+
+<span class="nn">File ~/anaconda3/envs/flopy/lib/python3.10/site-packages/flopy/discretization/structuredgrid.py:791,</span> in <span class="ni">StructuredGrid.intersect</span><span class="nt">(self, x, y, z, local, forgive)</span>
+<span class="g g-Whitespace">    </span><span class="mi">789</span>         <span class="n">col</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+<span class="g g-Whitespace">    </span><span class="mi">790</span>     <span class="k">else</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">791</span>         <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">792</span>             <span class="s2">&quot;x, y point given is outside of the model area&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">793</span>         <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">794</span> <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">795</span>     <span class="n">col</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">xcomp</span><span class="p">)[</span><span class="mi">0</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="ne">Exception</span>: x, y point given is outside of the model area
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="kontrolle-der-bisherigen-eingaben">
+<h2>Kontrolle der bisherigen Eingaben<a class="headerlink" href="#kontrolle-der-bisherigen-eingaben" title="Permalink to this headline">#</a></h2>
+<p>Das Modell ist fertig aufgebaut. Zur Kontrolle werden nochmal alle eingebundenen Packete ausgegeben:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">m</span><span class="o">.</span><span class="n">get_package_list</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Zudem wird das Modells mit den einzelnen Elemente (Zonen, Beobachtungspunkte, Randbedingungen) nochmals visualisiert:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Figure und Axis</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="c1"># Ausdehnung für imshow()</span>
+<span class="n">extent</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">Lx</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">Ly</span><span class="p">]</span>
+
+<span class="c1"># Dummy-Array, der später geplottet wird und dessen unterschiedliche Werte </span>
+<span class="c1"># das jeweilige Element anzeigen</span>
+<span class="n">plot_array</span> <span class="o">=</span> <span class="n">k_zones</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="c1"># Einzigartige Dummy-Werte für Fluss und Brunnen, um sie von K1 und K2</span>
+<span class="c1"># im Dummy-Array abgrenzen zu können</span>
+<span class="n">dummy_river</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">K1</span><span class="p">,</span> <span class="n">K2</span><span class="p">)</span> <span class="o">+</span> <span class="nb">abs</span><span class="p">(</span><span class="n">K1</span> <span class="o">-</span> <span class="n">K2</span><span class="p">)</span> <span class="o">*</span> <span class="mf">0.25</span>
+<span class="n">dummy_well</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">K1</span><span class="p">,</span> <span class="n">K2</span><span class="p">)</span> <span class="o">+</span> <span class="nb">abs</span><span class="p">(</span><span class="n">K1</span> <span class="o">-</span> <span class="n">K2</span><span class="p">)</span> <span class="o">*</span> <span class="mf">0.75</span>
+<span class="n">plot_array</span><span class="p">[</span><span class="n">river_df</span><span class="o">.</span><span class="n">row</span><span class="p">,</span> <span class="n">river_df</span><span class="o">.</span><span class="n">column</span><span class="p">]</span> <span class="o">=</span> <span class="n">dummy_river</span>
+<span class="n">plot_array</span><span class="p">[[</span><span class="n">w1_x_idx</span><span class="p">,</span> <span class="n">w2_x_idx</span><span class="p">],</span> <span class="p">[</span><span class="n">w1_y_idx</span><span class="p">,</span> <span class="n">w1_y_idx</span><span class="p">]]</span> <span class="o">=</span> <span class="n">dummy_well</span>
+
+<span class="c1"># Definition der Farben nach den Wertegrenzen der Dummy-Werte</span>
+<span class="n">colors_map</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="s2">&quot;mediumblue&quot;</span><span class="p">,</span> <span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="s2">&quot;wheat&quot;</span><span class="p">)</span>
+<span class="n">cmap</span> <span class="o">=</span> <span class="n">clrs</span><span class="o">.</span><span class="n">LinearSegmentedColormap</span><span class="o">.</span><span class="n">from_list</span><span class="p">(</span><span class="s1">&#39;Custom&#39;</span><span class="p">,</span> <span class="n">colors_map</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">colors_map</span><span class="p">))</span>
+<span class="n">boundaries</span> <span class="o">=</span> <span class="p">[</span><span class="nb">min</span><span class="p">(</span><span class="n">K1</span><span class="p">,</span> <span class="n">K2</span><span class="p">),</span>
+              <span class="p">(</span><span class="n">dummy_river</span> <span class="o">-</span> <span class="nb">min</span><span class="p">(</span><span class="n">K1</span><span class="p">,</span> <span class="n">K2</span><span class="p">))</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">+</span> <span class="nb">min</span><span class="p">(</span><span class="n">K1</span><span class="p">,</span> <span class="n">K2</span><span class="p">),</span> 
+              <span class="p">(</span><span class="n">dummy_well</span> <span class="o">-</span> <span class="n">dummy_river</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">dummy_river</span><span class="p">,</span>
+              <span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">K1</span><span class="p">,</span> <span class="n">K2</span><span class="p">)</span> <span class="o">-</span> <span class="n">dummy_well</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">dummy_well</span><span class="p">,</span> 
+              <span class="nb">max</span><span class="p">(</span><span class="n">K1</span><span class="p">,</span> <span class="n">K2</span><span class="p">)]</span>
+<span class="n">norm</span> <span class="o">=</span> <span class="n">clrs</span><span class="o">.</span><span class="n">BoundaryNorm</span><span class="p">(</span><span class="n">boundaries</span><span class="p">,</span> <span class="n">cmap</span><span class="o">.</span><span class="n">N</span><span class="p">,</span> <span class="n">clip</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Darstellen des Dummy-Arrays</span>
+<span class="n">im</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">plot_array</span><span class="p">,</span> <span class="n">extent</span><span class="o">=</span><span class="n">extent</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s1">&#39;None&#39;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">cmap</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="n">norm</span><span class="p">)</span>
+
+<span class="c1"># Zuordnen der Farben für die Legende</span>
+<span class="n">label_colors</span> <span class="o">=</span> <span class="p">[</span><span class="n">im</span><span class="o">.</span><span class="n">cmap</span><span class="p">(</span><span class="n">im</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">K1</span><span class="p">)),</span>
+         <span class="n">im</span><span class="o">.</span><span class="n">cmap</span><span class="p">(</span><span class="n">im</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">K2</span><span class="p">)),</span>
+         <span class="n">im</span><span class="o">.</span><span class="n">cmap</span><span class="p">(</span><span class="n">im</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">dummy_river</span><span class="p">)),</span>
+         <span class="n">im</span><span class="o">.</span><span class="n">cmap</span><span class="p">(</span><span class="n">im</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">dummy_well</span><span class="p">))]</span>
+<span class="n">label_names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;K1&quot;</span><span class="p">,</span>
+              <span class="s2">&quot;K2&quot;</span><span class="p">,</span>
+              <span class="s2">&quot;Fluss&quot;</span><span class="p">,</span>
+              <span class="s2">&quot;Brunnen&quot;</span><span class="p">]</span>
+<span class="c1"># Legende als einzelne Patches</span>
+<span class="n">patches</span> <span class="o">=</span> <span class="p">[</span> <span class="n">mpatches</span><span class="o">.</span><span class="n">Patch</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="n">label_colors</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="n">label_names</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">label_colors</span><span class="p">))</span> <span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">handles</span><span class="o">=</span><span class="n">patches</span><span class="p">,</span> <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">1.05</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">loc</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">borderaxespad</span><span class="o">=</span><span class="mf">0.</span> <span class="p">)</span>
+
+<span class="c1"># Darstellung des Grids</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">Lx</span><span class="p">,</span> <span class="mi">500</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">Lx</span><span class="p">,</span> <span class="n">delc</span><span class="p">),</span> <span class="n">minor</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">Ly</span><span class="p">,</span> <span class="mi">500</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">Ly</span><span class="p">,</span> <span class="n">delr</span><span class="p">),</span> <span class="n">minor</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">which</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">)</span>
+
+<span class="c1"># Definition des Titels</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Übersicht zu den verschiedenen Elementen im Modell&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="ausfuhren-des-modells">
+<h2>Ausführen des Modells<a class="headerlink" href="#ausfuhren-des-modells" title="Permalink to this headline">#</a></h2>
+<p>An dieser Stelle werden die Input-Daten in das Modellverzeichnis geschrieben und das Grundwasserströmungsmodells berechnet. Die Simulation ist danach abgeschlossen und die Ergebnisse finden sich im Modellverzeichnis.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Schreiben der Modell-Input-Files</span>
+<span class="n">m</span><span class="o">.</span><span class="n">write_input</span><span class="p">()</span>
+
+<span class="c1"># Ausführen des Modells</span>
+<span class="n">m</span><span class="o">.</span><span class="n">run_model</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./Flopy"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Thomas Reimann, Leonard Grabow<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
